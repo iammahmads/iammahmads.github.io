@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the portfolio website of **Muhammad Ahmad Shahid**.
 
-Currently, two official plugins are available:
+## About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hello! I'm Muhammad Ahmad Shahid, a Full Stack Web Developer with expertise in:
+- HTML, CSS, JavaScript
+- React, Next.js
+- Back-end development
 
-## Expanding the ESLint configuration
+I hold a Google Project Management Certificate and have a strong background in web application development and WordPress development. I value honesty, productivity, loyalty, management skills, professional behavior, continuous learning, effective communication, and paying it forward.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Projects
 
-- Configure the top-level `parserOptions` property like this:
+Here are some of the full stack projects I have worked on:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **URL Shortner**
+   - A full stack app that creates and displays analytics of over-all usage of app
+   - Technologies used: JavaScript, React, Chart, Node.js, Express Mongodb.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. **Blogger**
+   - Blogger App where users can create and publish there blogs.
+   - Technologies used: JavaScript, React, Quil Text, Node.js, Express Mongodb.
+
+3. **E-commerece**
+   - A full stack ecommerece app.
+   - Technologies used: JavaScript, React, Google Drive, Node.js, Express Mongodb.
+
+4. **Hospital Mangement System**
+   - A full stack Hospital mangement system with Doctors, Patients and Admin Dashboards.
+   - Technologies used: JavaScript, React, Node.js, Express Mongodb.
+
+## Contact
+
+Feel free to reach out to me through the contact form on my website. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+
+---
+
+Thank you for visiting my portfolio!
