@@ -26,7 +26,7 @@ const SocialSidebar = () => {
             Socials
           </p>
 
-          <a href="https://github.com/me-mahmads" target="_blank">
+          <a href="https://github.com/iammahmads" target="_blank">
             <i
               data-tooltip-id="tooltip-github"
               data-tooltip-content="Github"
@@ -36,7 +36,7 @@ const SocialSidebar = () => {
           <Tooltip id="tooltip-github" style={tooltipStyle} />
 
           <a
-            href="https://www.linkedin.com/in/muhammad-ahmad-shahid-4418bb247/"
+            href="www.linkedin.com/in/iammahmads"
             target="_blank"
           >
             <i
@@ -48,7 +48,7 @@ const SocialSidebar = () => {
           <Tooltip id="tooltip-linkedin" style={tooltipStyle} />
 
           <a
-            href="mailto:malikahmed4150@gmail.com?body=Hi,%20I%20need%20your%20assistance."
+            href="mailto:mahmads0323@gmail.com?body=Hi,%20I%20need%20your%20assistance."
             target="_blank"
           >
             <i
@@ -71,7 +71,7 @@ const SocialSidebar = () => {
           </a>
           <Tooltip id="tooltip-whatsapp" style={tooltipStyle} />
 
-          <a href="https://twitter.com/me_mahmads" target="_blank">
+          <a href="https://twitter.com/iammahmads" target="_blank">
             <i
               data-tooltip-id="tooltip-twitter"
               data-tooltip-content="X"

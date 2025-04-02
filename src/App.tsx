@@ -2,14 +2,15 @@ import "./App.css";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import SocialSidebar from "./components/socialSidebar";
-import HomePage from "./pages/home";
+
+import { Outlet } from "react-router-dom";
 
 function App() {
 
   return (
     <>
       <Header />
-      <HomePage />
+      <Outlet />
       <Footer />
       <SocialSidebar />
     </>
