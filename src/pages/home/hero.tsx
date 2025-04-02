@@ -10,9 +10,9 @@ const Hero = () => {
         <p className="text-lg w-full text-textDecription text-center text-wrap md:text-xl lg:text-2xl">
           <span className="block">It's great to have you here.</span>I am&nbsp;
           <span className="text-xl text-primary font-semibold md:text-2xl lg:text-3xl">
-            Muhmmad Ahmad
+            Ahmad
           </span>{" "}
-          a Software Engr. &#128526;
+          Software Engineer. &#128526;
         </p>
         <div className="w-full flex justify-center animate-[showUp_2s_ease] ">
           <a
