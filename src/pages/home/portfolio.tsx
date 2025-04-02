@@ -1,6 +1,7 @@
+import LeftCard from "../../components/cards/leftCard";
+import RightCard from "../../components/cards/rightCard";
 import portfolioItems from "./portfolioItems";
-import LeftCard from "./reusable/leftCard";
-import RightCard from "./reusable/rightCard";
+
 
 const Portfolio = () => {
   return (

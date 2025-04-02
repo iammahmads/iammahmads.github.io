@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import postEmail from "../services/postEmail";
+import postEmail from "../../services/postEmail";
 
 const initialDetails = {
   name: "",

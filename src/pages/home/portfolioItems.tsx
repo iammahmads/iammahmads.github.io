@@ -1,4 +1,4 @@
-import portfolioItemType from "./reusable/portfolioItemType";
+import portfolioItemType from "./portfolioItemType";
 import URL_SHORTNER from "/URL_SHORTNER.png";
 import BLOGGER from "/BLOGGER.png"
 import ECOMMERECE from "/ECOMMERECE.png"

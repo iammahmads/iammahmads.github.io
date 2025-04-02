@@ -1,7 +1,7 @@
-import portfolioItemType from "./portfolioItemType";
+import portfolioItemType from "../../pages/home/portfolioItemType";
 import StackCard from "./stackCard";
 
-const RightCard = ({
+const LeftCard = ({
   title,
   description,
   image,
@@ -10,23 +10,30 @@ const RightCard = ({
 }: portfolioItemType) => {
   return (
     <div className="w-full flex animate-[fade_2s_ease]">
-      {/* empty space */}
-      <div className="hidden lg:block lg:w-[25%]"></div>
       {/* content */}
-      <div className="w-full flex flex-col-reverse bg-secondry border border-primary shadow-md shadow-primary my-2 lg:w-[75%] lg:flex-row lg:justify-end lg:rounded-l-full lg:border-r lg:border-primary ">
-        <div className="p-4 flex flex-col gap-2  text-primary lg:w-[45%] ">
-          <h2 className=" font-semibold text-base md:text-lg">
+      <div className="w-full flex flex-col bg-secondry border border-primary shadow-md shadow-primary my-2 lg:w-[75%] lg:flex-row  lg:rounded-r-full lg:border-r lg:border-primary ">
+        <div className="lg:w-[45%]">
+          <img
+            src={image}
+            alt={image}
+            className="h-full w-full"
+          />
+        </div>
+        <div className="p-4 flex flex-col gap-2 text-primary lg:w-[45%]">
+          <h2 className="font-semibold text-base md:text-lg">
             Project:{" "}
             <span className="text-textDecription font-semibold">{title}</span>
           </h2>
-          <h3 className=" font-semibold md:text-base">
+          <h3 className="font-semibold md:text-base">
             Description:{" "}
-            <span className=" text-textDecription font-normal">
+            <span className="text-textDecription font-normal">
               {description}
             </span>
           </h3>
           <div>
-            <p className="inline-block font-semibold md:text-base">Stack: </p>
+            <p className="inline-block font-semibold md:text-base">
+              Stack:{" "}
+            </p>
             {stack.map((item, index) => (
               <StackCard name={item} key={index} />
             ))}
@@ -42,17 +49,11 @@ const RightCard = ({
             </p>
           </a>
         </div>
-
-        <div className="lg:w-[45%]">
-          <img
-            src={image}
-            alt={image}
-            className="h-full w-full"
-          />
-        </div>
       </div>
+      {/* empty space */}
+      <div className="hidden lg:block lg:w-[25%]"></div>
     </div>
   );
 };
 
-export default RightCard;
+export default LeftCard;
