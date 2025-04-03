@@ -35,6 +35,9 @@ const Contact = () => {
       message: formDetails.message,
     });
     setIsFormSubmitting(false);
+    if (responseData === "SUCCESS") {
+      alert("Form submitted successfully");
+    }
     if (responseData.includes("ERROR")) {
       setErrorMessage("Error in sending mail");
       setTimeout(() => {

@@ -28,11 +28,11 @@ const postEmail = async ({ from_name, from_email, message }: IEmail) => {
     await fetch(GoogleFormUrl, {
       method: "POST",
       mode: "no-cors",
-      body: formData
-    })
+      body: formData,
+    });
     return "SUCCESS";
   } catch (err) {
-    console.log(err)
+    console.log(err);
     return "ERROR: " + err;
   }
 };
