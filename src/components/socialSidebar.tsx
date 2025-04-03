@@ -36,7 +36,7 @@ const SocialSidebar = () => {
           <Tooltip id="tooltip-github" style={tooltipStyle} />
 
           <a
-            href="www.linkedin.com/in/iammahmads"
+            href="https://www.linkedin.com/in/iammahmads"
             target="_blank"
           >
             <i

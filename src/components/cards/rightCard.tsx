@@ -47,6 +47,7 @@ const RightCard = ({
           <img
             src={image}
             alt={image}
+            loading="lazy"
             className="h-full w-full"
           />
         </div>
