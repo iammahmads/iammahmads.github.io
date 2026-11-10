@@ -16,3 +16,4 @@ if (fs.existsSync(notFoundHtml)) {
     fs.copyFileSync(indexHtml, target404);
   }
 }
+

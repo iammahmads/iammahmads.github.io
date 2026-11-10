@@ -8,3 +8,4 @@ description: How GitHub data is fetched, cached and rendered. Use when touching 
 - Build must never fail because GitHub is unreachable.
 - Sanitise README markdown; rewrite relative asset links.
 - Curation lives in app/content/projects.overrides.ts, not in components.
+

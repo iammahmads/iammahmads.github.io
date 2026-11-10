@@ -23,41 +23,42 @@
   - Created `react-router.config.ts` pre-rendering `/`, `/projects`, `/education`, `/404`, and all `/projects/<slug>` routes.
   - Output directory configured as `build/client`.
   - Added `scripts/postbuild.mjs` ensuring `build/client/404.html` is generated for static hosting.
-  - Confirmed pre-rendered HTML contains semantic elements, per-route `<title>`, Open Graph tags, and zero `<canvas>` elements (proving clean client-only mounting without SSR leakage).
-- **GitHub Layer Spike:**
-  - Implemented `app/lib/github.schema.ts` with strict Zod validation.
-  - Implemented `scripts/github-sync.ts` wired as `prebuild` and `npm run github:sync`.
-  - Generated initial `app/content/github.snapshot.json` containing 23 validated projects.
-  - Added fallback resilience: if GitHub API is unreachable, build proceeds from cached snapshot without failing.
-- **Contact Form Port:**
-  - Ported existing Google Forms submission logic into typed `app/lib/contact.ts` and `app/content/site.ts` with validation, timeout guard, and honest delivery semantics ("sent" vs "delivered").
+  - Confirmed pre-rendered HTML contains semantic elements, per-route `<title>`, Open Graph tags, and zero `<canvas>` elements.
 - **Agent Skills:**
   - Created required skills in `.agent/skills/`: `portfolio-design-rules`, `r3f-performance`, `github-projects-sync`, `contact-form`, `quality-gate`.
-- **Testing & Quality:**
-  - Added Vitest suite in `tests/contact.spec.ts` and `tests/github.spec.ts`. All 6 tests passing.
-  - `npm run lint` passing (0 errors).
-  - `npm run typecheck` passing (0 errors).
-  - `npm run build` succeeds in ~300ms.
 
 ---
 
-## Phase 2: Design System & Styleguide (Complete)
+## Phase 2: Design System & Styleguide (Complete - Approved)
 
 - **Date:** 10 November 2026
 - **Concept:** "Glass Core" — deep atmospheric aubergine (`#170B2B`), structural surfaces (`#241346`), secondary lilac text accents (`#B9A7FF`), and a single interactive aqua accent (`#3DF2E0`).
 - **Typography:**
-  - Display: `Bricolage Grotesque` (variable font, width axis, expressive headlines).
-  - Body: `Instrument Sans` (clean, contemporary, human sans-serif).
-  - Type scale: 1.250 ratio, max line length 75ch.
+  - Display: `Bricolage Grotesque` (variable font, width axis).
+  - Body: `Instrument Sans`.
 - **Components Implemented:**
-  - `Button` (`app/components/ui/Button.tsx`): Primary (aqua fill, ink text), Secondary (surface fill, lilac border), Ghost. Full keyboard focus, disabled states, router/anchor polymorphism.
-  - `Chip` (`app/components/ui/Chip.tsx`): Interactive technology badge with count, toggle states, accessible aria-pressed.
-  - `Nav` (`app/components/ui/Nav.tsx`): Fixed backdrop-blur navbar with Glass Core styling, active route indication.
-  - `Footer` (`app/components/ui/Footer.tsx`): Semantic footer with verified social links (GitHub, LinkedIn, X, email).
-  - `SkipLink` (`app/components/ui/SkipLink.tsx`): Accessible skip link for keyboard navigation.
-- **Styleguide Route:**
-  - Created `/styleguide` (`app/routes/styleguide.tsx`) showcasing all tokens, typography hierarchy, button states, and chips.
+  - `Button` (`app/components/ui/Button.tsx`): Primary, Secondary, Ghost with full keyboard and disabled states.
+  - `Chip` (`app/components/ui/Chip.tsx`): Interactive technology badge with counts and aria-pressed states.
+  - `Nav` (`app/components/ui/Nav.tsx`), `Footer` (`app/components/ui/Footer.tsx`), `SkipLink` (`app/components/ui/SkipLink.tsx`).
+- **Styleguide:**
+  - Created `/styleguide` (`app/routes/styleguide.tsx`) pre-rendered to `build/client/styleguide/index.html`.
+- **Status:** Approved by owner.
+
+---
+
+## Phase 3: GitHub Data Layer (Complete)
+
+- **Date:** 10 November 2026
+- **Implementation:**
+  - Extracted modular ranking and scoring logic into `app/lib/github-ranking.ts`.
+  - Prioritizes owner's pinned repositories (`FypGuard`, `short-url`, `dev-ecommerce`, `code_commenter`, `erc-8004-hackathon`, `blooging`, `Andoid-Magent-Detector`, `zerobug`).
+  - Fallback algorithmic ranking based on descriptions, live homepage URLs, star count, and commit recency.
+  - Automatic filtering of forks and archived repos.
+  - Curation overrides in `app/content/projects.overrides.ts`.
+  - Schema validation with Zod (`app/lib/github.schema.ts`).
+  - `scripts/github-sync.ts` integrated as `prebuild` step and `npm run github:sync`.
+  - Resilient offline mode: build falls back to committed `app/content/github.snapshot.json` and never fails if GitHub API is unreachable or token is missing.
 - **Verification:**
-  - Pre-rendered static HTML at `build/client/styleguide/index.html`.
-  - `npm run lint`, `npm run typecheck`, and `npm run build` all pass cleanly.
-- **Phase 2 STOP Gate:** Proposing design system for owner review.
+  - 10 unit tests passing (`tests/github-ranking.spec.ts`, `tests/github.spec.ts`, `tests/contact.spec.ts`).
+  - Verified static generation for all 23 project pages.
+- **Next Phase:** Phase 4 (Hero & 3D Glass Core Scene).

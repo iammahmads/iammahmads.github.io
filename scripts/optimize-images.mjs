@@ -30,3 +30,4 @@ async function optimize() {
 optimize().catch((err) => {
   console.error("Image optimization error:", err);
 });
+

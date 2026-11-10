@@ -8,3 +8,4 @@ description: Rules for the contact form and lib/contact.ts. Use when touching co
 - Validate, trim, cap length; honeypot; cooldown; disable the button while sending.
 - Tests intercept docs.google.com. CI never posts to the real form.
 - Any change to the form needs a manual test submission on staging.
+

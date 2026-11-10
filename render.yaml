@@ -24,3 +24,4 @@ services:
       - type: rewrite
         source: /404
         destination: /404.html
+

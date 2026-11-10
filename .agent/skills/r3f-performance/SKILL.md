@@ -9,3 +9,4 @@ description: Rules for React Three Fiber code in this project. Use when touching
 - Pause when off-screen or tab hidden; dispose on unmount.
 - Keep 3D chunk under about 450 KB gzipped; report size after each change.
 - R3F major must match the React major (v9 with React 19). Check peers before upgrading either.
+

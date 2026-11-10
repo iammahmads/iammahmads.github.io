@@ -2,33 +2,17 @@ import fs from "node:fs";
 import path from "node:path";
 import { GithubSnapshotSchema, type Project, type GithubSnapshot } from "../app/lib/github.schema.js";
 import { projectOverrides } from "../app/content/projects.overrides.js";
+import { rankRepos } from "../app/lib/github-ranking.js";
 
 const USERNAME = "iammahmads";
 const SNAPSHOT_PATH = path.resolve(process.cwd(), "app/content/github.snapshot.json");
 const TOKEN = process.env.GITHUB_TOKEN;
 
-// Helper to convert repo name to kebab-case slug
 function toSlug(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-// Fallback ranking calculation
-function scoreRepo(repo: {
-  description: string | null;
-  homepage: string | null;
-  stargazers_count: number;
-  pushed_at: string;
-}): number {
-  let score = 0;
-  if (repo.description) score += 100;
-  if (repo.homepage) score += 50;
-  score += repo.stargazers_count * 10;
-  const daysAgo = (Date.now() - new Date(repo.pushed_at).getTime()) / (1000 * 60 * 60 * 24);
-  if (daysAgo < 365) score += Math.max(0, 50 - Math.floor(daysAgo / 10));
-  return score;
-}
-
-async function syncGithub(): Promise<void> {
+export async function syncGithub(): Promise<void> {
   console.info(`[github-sync] Syncing GitHub repositories for user: ${USERNAME}`);
 
   let existingSnapshot: GithubSnapshot | null = null;
@@ -50,14 +34,12 @@ async function syncGithub(): Promise<void> {
   }
 
   try {
-    // 1. Fetch user profile
     const userRes = await fetch(`https://api.github.com/users/${USERNAME}`, { headers });
     if (!userRes.ok) {
       throw new Error(`GitHub user API returned ${userRes.status}: ${userRes.statusText}`);
     }
     const userData = await userRes.json();
 
-    // 2. Fetch repos
     const reposRes = await fetch(
       `https://api.github.com/users/${USERNAME}/repos?per_page=100&sort=pushed`,
       { headers }
@@ -67,10 +49,6 @@ async function syncGithub(): Promise<void> {
     }
     const allRepos: any[] = await reposRes.json();
 
-    // Filter out forks and archived repos
-    const validRepos = allRepos.filter((r) => !r.fork && !r.archived);
-
-    // Known pinned repo list (from GitHub profile)
     const pinnedNames = [
       "FypGuard",
       "short-url",
@@ -82,18 +60,10 @@ async function syncGithub(): Promise<void> {
       "zerobug",
     ];
 
+    const sortedRepos = rankRepos(allRepos, pinnedNames);
     const projects: Project[] = [];
 
-    // Sort by pinned or ranking score
-    validRepos.sort((a, b) => {
-      const aPinned = pinnedNames.includes(a.name);
-      const bPinned = pinnedNames.includes(b.name);
-      if (aPinned && !bPinned) return -1;
-      if (!aPinned && bPinned) return 1;
-      return scoreRepo(b) - scoreRepo(a);
-    });
-
-    for (const repo of validRepos) {
+    for (const repo of sortedRepos) {
       const override = projectOverrides[repo.name] || {};
       if (override.hidden) continue;
 
@@ -126,7 +96,6 @@ async function syncGithub(): Promise<void> {
       });
     }
 
-    // Sort projects by order then by stars/pushedAt
     projects.sort((a, b) => a.order - b.order);
 
     const snapshot: GithubSnapshot = {
@@ -140,7 +109,6 @@ async function syncGithub(): Promise<void> {
       projects,
     };
 
-    // Validate with zod
     const validated = GithubSnapshotSchema.parse(snapshot);
     fs.writeFileSync(SNAPSHOT_PATH, JSON.stringify(validated, null, 2), "utf-8");
     console.info(`[github-sync] Successfully wrote ${projects.length} projects to snapshot.`);
@@ -173,27 +141,6 @@ async function syncGithub(): Promise<void> {
             order: 1,
             source: "pinned",
           },
-          {
-            slug: "short-url",
-            name: "short-url",
-            title: "URL Shortener & Analytics",
-            summary: "URL shortening platform with real-time analytics, user dashboards, and link tracking.",
-            repoUrl: "https://github.com/iammahmads/short-url",
-            media: {
-              type: "image",
-              src: "/URL_SHORTNER.png",
-              alt: "URL Shortener dashboard",
-            },
-            stars: 0,
-            forks: 0,
-            pushedAt: new Date().toISOString(),
-            language: { name: "JavaScript" },
-            languages: [{ name: "JavaScript", share: 100 }],
-            topics: ["react", "node", "express", "mongodb"],
-            featured: true,
-            order: 2,
-            source: "pinned",
-          },
         ],
       };
       fs.writeFileSync(SNAPSHOT_PATH, JSON.stringify(fallbackSnapshot, null, 2), "utf-8");
@@ -201,4 +148,6 @@ async function syncGithub(): Promise<void> {
   }
 }
 
-syncGithub();
+if (process.argv[1] && process.argv[1].endsWith("github-sync.ts")) {
+  syncGithub();
+}

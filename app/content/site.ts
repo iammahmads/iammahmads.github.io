@@ -34,3 +34,4 @@ export const site = {
     privacyNotice: "Your message goes through Google Forms and is read only by me.",
   },
 };
+

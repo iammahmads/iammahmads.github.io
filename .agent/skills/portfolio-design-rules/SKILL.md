@@ -8,3 +8,4 @@ description: Design and copy rules for this portfolio. Use when creating or chan
 - No fade-up on every section. Motion only for the hero reveal, scroll-linked 3D, and user actions.
 - Copy: first person, plain, specific. Buttons name the action.
 - Before finishing a UI task: screenshot at 390/768/1440, critique, remove one unnecessary element.
+

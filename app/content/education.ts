@@ -146,3 +146,4 @@ export const education: EducationData = {
     subject: "[Education] Prospective Master's Research Inquiry",
   },
 };
+

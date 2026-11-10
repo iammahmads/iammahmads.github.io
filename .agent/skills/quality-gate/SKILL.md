@@ -10,3 +10,4 @@ description: Checklist to run before marking any phase done.
 6. Reduced-motion on, WebGL off, JavaScript off: confirm graceful behaviour.
 7. No TODO(owner) text visible; all links resolve.
 8. Update PROGRESS.md.
+

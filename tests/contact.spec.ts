@@ -38,3 +38,4 @@ describe("Contact form validation", () => {
     expect(Object.keys(errors)).toHaveLength(0);
   });
 });
+

@@ -83,3 +83,4 @@ export function ErrorBoundary({ error }: { error: unknown }) {
     </div>
   );
 }
+

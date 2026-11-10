@@ -50,3 +50,4 @@ export const GithubSnapshotSchema = z.object({
 
 export type Project = z.infer<typeof ProjectSchema>;
 export type GithubSnapshot = z.infer<typeof GithubSnapshotSchema>;
+
