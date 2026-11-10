@@ -99,3 +99,4 @@ describe("Pre-rendered Static HTML & SEO Verification", () => {
     expect(robots).toContain(`Sitemap: ${site.url}/sitemap.xml`);
   });
 });
+

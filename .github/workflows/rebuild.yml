@@ -18,3 +18,4 @@ jobs:
           fi
           echo "Triggering Render deploy hook..."
           curl -s -S -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+

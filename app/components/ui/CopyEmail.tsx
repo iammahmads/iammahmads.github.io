@@ -39,3 +39,4 @@ export function CopyEmail({ className = "" }: { className?: string }) {
     </div>
   );
 }
+

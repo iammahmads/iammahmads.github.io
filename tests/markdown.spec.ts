@@ -24,3 +24,4 @@ describe("Markdown relative URL rewriting", () => {
     );
   });
 });
+
