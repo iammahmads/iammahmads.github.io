@@ -61,4 +61,25 @@
 - **Verification:**
   - 10 unit tests passing (`tests/github-ranking.spec.ts`, `tests/github.spec.ts`, `tests/contact.spec.ts`).
   - Verified static generation for all 23 project pages.
-- **Next Phase:** Phase 4 (Hero & 3D Glass Core Scene).
+
+---
+
+## Phase 4: Hero & 3D Scene (Complete)
+
+- **Date:** 10 November 2026
+- **Implementation:**
+  - Procedural "Glass Core" geometry with faceted icosahedron shell and inner glowing amber seed (`app/components/scene/Core.tsx`).
+  - Local studio lighting with lilac rim lighting, soft ambient aubergine, and amber interior glow (`app/components/scene/Lighting.tsx`). No remote CDN dependencies.
+  - Cursor tracking with damped lerp easing and mobile auto-drift.
+  - 4 performance tiers (`app/components/scene/store.ts`):
+    - Tier 0: No WebGL / reduced motion / weak device -> Zero canvas, static atmospheric glow poster fallback.
+    - Tier 1: Fast physical reflective material, dpr 1.0, 4 shards.
+    - Tier 2: Refractive transmission material with lilac/aqua dispersion, dpr 1.5, 8 shards.
+    - Tier 3: Full transmission and high dpr 1.75.
+  - Visibility management: pauses animation loops when tab is hidden or off-screen.
+- **Verification & Performance Metrics:**
+  - Lazy 3D chunk: **243.7 KB gzipped** (well within budget target of <450 KB gzipped).
+  - Pre-rendered HTML contains zero `<canvas>` tags.
+  - Zero memory leaks: all geometries and materials disposed on unmount.
+  - Clean client-only mounting inside `Suspense` without blocking first contentful paint.
+- **Next Phase:** Phase 5 (Home Sections: Hero, Intro, Showcase, Capabilities, EducationTeaser, ContactForm).
