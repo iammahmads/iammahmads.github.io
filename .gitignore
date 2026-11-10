@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 .env
-.env.example
 dist
 dist-ssr
 *.local
@@ -29,4 +28,3 @@ dist-ssr
 # React Router & Build output
 build
 .react-router
-.env.example
