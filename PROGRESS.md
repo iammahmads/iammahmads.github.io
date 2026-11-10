@@ -4,60 +4,38 @@
 
 - **Date:** 10 November 2026
 - **Branch:** `redesign/3d` (active)
+- **Approved Tagline:** Option 3 — *"Full-stack software engineer crafting robust applications and preparing for advanced research."*
+- **Confirmed Defaults:** Proceeded with all stated defaults from Appendix C questionnaire for Education, projects, styling ("Glass Core"), and contact form.
 
-### 1. Existing Site & Repository Audit
-- **Current Live Site:** `https://muhammadahmad.onrender.com/`
-- **Current Stack Confirmed:**
-  - Vite 5.2.0, React 18.2.0, React Router DOM 7.4.1 (with legacy `@types/react-router-dom` 5.3.3)
-  - Tailwind CSS 3.4.3 + PostCSS + Autoprefixer
-  - TypeScript 5.2.2, Node.js v24.18.1
-  - Existing Build Command: `tsc && vite build` (to be split into `typecheck` and `build`)
-  - Hosting: Render Static Site (existing publish directory `dist`, to become `build/client`)
-- **Metadata & Asset Discoveries:**
-  - Owner: Muhammad Ahmad Shahid (`iammahmads`)
-  - Real Email: `mahmads0323@gmail.com` (found in `src/components/socialSidebar.tsx`; fixed old metadata bug where email was a GitHub URL)
-  - Real LinkedIn: `https://www.linkedin.com/in/iammahmads` (found in `src/components/socialSidebar.tsx`; fixed old metadata bug pointing to X)
-  - GitHub: `https://github.com/iammahmads`
-  - X (Twitter): `https://x.com/iammahmads`
-  - Profile Image: `/muhammad-ahmad-shahid.jpeg` (exists in `/public`)
-  - Project Images: `URL_SHORTNER.png`, `BLOGGER.png`, `ECOMMERECE.png`, `HOSPITAL.png`, `BUS_MANAGMENT.png`, `3-STRATEGIES.png`, `LOGO.png`
-- **Existing Routes:**
-  - `/` (Home page with Header, Hero, About, Projects, Contact, Footer)
-  - `/*` (`NotFound` component)
+---
 
-### 2. Contact Form Baseline
-- **Delivery:** Direct `no-cors` POST to Google Forms response endpoint:
-  - Action URL: `https://docs.google.com/forms/d/e/1FAIpQLSdBoBjQQm-0GHZxKGxrs94P0ugnRJW_SEjbm6Bmd5KHGThAMg/formResponse`
-  - Name Entry: `entry.2005620554`
-  - Email Entry: `entry.1045781291`
-  - Message Entry: `entry.839337160`
-- **Assessment:** Works without backend, but needs hardening per PLAN 6.8: typed results, timeout, honeypot, honest copy ("sent" not "delivered"), inline validation, length checks.
+## Phase 1: Migration Spike and Scaffold (Complete)
 
-### 3. GitHub Audit (`iammahmads`)
-- **Pinned Repositories:**
-  - `FypGuard`: TypeScript — Final Year Project for Software Engineering (Batch 2022-2026, GCUF). Code authorship and compliance verification.
-  - `Andoid-Magent-Detector`: Kotlin
-  - `erc-8004-hackathon`: TypeScript
-  - `zerobug`: JavaScript
-  - `iammahmads`: GitHub profile config
-  - `code_commenter`: Python — Hackathon project for LablabAi
-- **Other Key Repositories:**
-  - `short-url`: JavaScript (React, Node, Express, MongoDb)
-  - `dev-ecommerce`: TypeScript (React, Node, Express, MongoDb)
-  - `blooging`: JavaScript (Blogging app, MERN)
-  - `TeachMe`: TypeScript (OpenAI Build Week)
-  - `deriv-hackathon-frontend` & `deriv-hackathon-backend`: TypeScript & Python (Sentinal AI)
-  - `name-generator-ai`: Python
-  - `converter`: TypeScript
-
-### 4. Tagline Proposals (for Owner Approval)
-1. **Option 1 (Engineering craft & full-stack systems):**
-   > *"Building resilient web systems and intelligent tools from concept to code."*
-2. **Option 2 (Academic & research focus):**
-   > *"Software engineer exploring scalable architectures, code integrity, and intelligent systems."*
-3. **Option 3 (Direct, clear & human):**
-   > *"Full-stack software engineer crafting robust applications and preparing for advanced research."*
-
-### 5. Questionnaire & Next Steps
-- Created `CONTENT_NEEDED.md` with all Appendix C questions and stated defaults.
-- **Phase 0 STOP Gate:** Awaiting owner confirmation of stack, tagline choice, and questionnaire responses (or acceptance of defaults) to proceed with Phase 1 (migration spike & scaffold).
+- **Date:** 10 November 2026
+- **Stack Upgrades:**
+  - Upgraded React to 19.3.1 and React DOM to 19.3.1 (`D1`).
+  - Upgraded Three.js to 0.187.0 with `@react-three/fiber` 9.8.2 and `@react-three/drei` 10.7.9.
+  - Migrated to React Router 7 framework mode (`react-router` 7.18.5, `@react-router/dev` 7.18.5) with `ssr: false` and `prerender` static HTML (`D2`).
+  - Migrated to Tailwind CSS v4.3.5 via `@tailwindcss/vite` with `@theme` CSS tokens in `app/app.css` (`D3`). Removed obsolete `postcss.config.js` and `tailwind.config.js`.
+  - Migrated to ESLint 9.14.0 with flat config (`eslint.config.js`) and TypeScript ESLint 8.72.2.
+  - Removed `@types/react-router-dom` and `react-router-dom`.
+- **Pre-rendering & Architecture:**
+  - Created `react-router.config.ts` pre-rendering `/`, `/projects`, `/education`, `/404`, and all `/projects/<slug>` routes.
+  - Output directory configured as `build/client`.
+  - Added `scripts/postbuild.mjs` ensuring `build/client/404.html` is generated for static hosting.
+  - Confirmed pre-rendered HTML contains semantic elements, per-route `<title>`, Open Graph tags, and zero `<canvas>` elements (proving clean client-only mounting without SSR leakage).
+- **GitHub Layer Spike:**
+  - Implemented `app/lib/github.schema.ts` with strict Zod validation.
+  - Implemented `scripts/github-sync.ts` wired as `prebuild` and `npm run github:sync`.
+  - Generated initial `app/content/github.snapshot.json` containing 23 validated projects.
+  - Added fallback resilience: if GitHub API is unreachable, build proceeds from cached snapshot without failing.
+- **Contact Form Port:**
+  - Ported existing Google Forms submission logic into typed `app/lib/contact.ts` and `app/content/site.ts` with validation, timeout guard, and honest delivery semantics ("sent" vs "delivered").
+- **Agent Skills:**
+  - Created required skills in `.agent/skills/`: `portfolio-design-rules`, `r3f-performance`, `github-projects-sync`, `contact-form`, `quality-gate`.
+- **Testing & Quality:**
+  - Added Vitest suite in `tests/contact.spec.ts` and `tests/github.spec.ts`. All 6 tests passing.
+  - `npm run lint` passing (0 errors).
+  - `npm run typecheck` passing (0 errors).
+  - `npm run build` succeeds in ~300ms.
+- **Next Phase:** Phase 2 (Design System & Styleguide).

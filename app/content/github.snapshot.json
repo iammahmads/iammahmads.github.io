@@ -1,0 +1,542 @@
+{
+  "fetchedAt": "2026-11-10T09:57:13.893Z",
+  "user": {
+    "login": "iammahmads",
+    "name": "Muhammad Ahmad Shahid",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/139263516?v=4",
+    "bio": "Furnishing my knowledge continuously"
+  },
+  "projects": [
+    {
+      "slug": "fypguard",
+      "name": "FypGuard",
+      "title": "FypGuard — Code Authorship & Compliance",
+      "summary": "Academic integrity and compliance verification system to detect unauthorized AI assistance and authenticate code authorship.",
+      "repoUrl": "https://github.com/iammahmads/FypGuard",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-10-02T12:49:32Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": true,
+      "order": 1,
+      "source": "pinned"
+    },
+    {
+      "slug": "short-url",
+      "name": "short-url",
+      "title": "URL Shortener & Analytics",
+      "summary": "Scalable URL shortening service with real-time click tracking, geolocation analytics, and interactive charts.",
+      "repoUrl": "https://github.com/iammahmads/short-url",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2024-04-08T15:35:58Z",
+      "language": {
+        "name": "JavaScript"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "media": {
+        "type": "image",
+        "src": "/URL_SHORTNER.png",
+        "alt": "URL Shortener dashboard screenshot"
+      },
+      "featured": true,
+      "order": 2,
+      "source": "pinned"
+    },
+    {
+      "slug": "dev-ecommerce",
+      "name": "dev-ecommerce",
+      "title": "Full-Stack E-Commerce Platform",
+      "summary": "Modern web store featuring product catalogs, cart state management, checkout flows, and persistent data storage.",
+      "repoUrl": "https://github.com/iammahmads/dev-ecommerce",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2024-05-24T04:27:17Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "media": {
+        "type": "image",
+        "src": "/ECOMMERECE.png",
+        "alt": "E-Commerce store product page"
+      },
+      "featured": true,
+      "order": 3,
+      "source": "pinned"
+    },
+    {
+      "slug": "code-commenter",
+      "name": "code_commenter",
+      "title": "CodeCommenter AI",
+      "summary": "AI-assisted code annotation tool built for the LablabAi hackathon to generate structured inline documentation.",
+      "repoUrl": "https://github.com/iammahmads/code_commenter",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2025-06-14T19:53:56Z",
+      "language": {
+        "name": "Python"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": true,
+      "order": 4,
+      "source": "pinned"
+    },
+    {
+      "slug": "erc-8004-hackathon",
+      "name": "erc-8004-hackathon",
+      "title": "ERC-8004 Token Standard",
+      "summary": "Decentralized application exploring experimental Ethereum token standard mechanics built during a Web3 hackathon.",
+      "repoUrl": "https://github.com/iammahmads/erc-8004-hackathon",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-04-08T12:22:54Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": true,
+      "order": 5,
+      "source": "pinned"
+    },
+    {
+      "slug": "blooging",
+      "name": "blooging",
+      "title": "Blogger CMS",
+      "summary": "Content publishing platform with rich-text editor, user authentication, and responsive article layouts.",
+      "repoUrl": "https://github.com/iammahmads/blooging",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2024-04-05T21:44:38Z",
+      "language": {
+        "name": "JavaScript"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "media": {
+        "type": "image",
+        "src": "/BLOGGER.png",
+        "alt": "Blogger app dashboard"
+      },
+      "featured": false,
+      "order": 6,
+      "source": "pinned"
+    },
+    {
+      "slug": "andoid-magent-detector",
+      "name": "Andoid-Magent-Detector",
+      "title": "Android Magnet Detector",
+      "summary": "Native Android utility reading hardware magnetometer sensors to detect localized magnetic flux variations.",
+      "repoUrl": "https://github.com/iammahmads/Andoid-Magent-Detector",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-01-05T14:05:01Z",
+      "language": {
+        "name": "Kotlin"
+      },
+      "languages": [
+        {
+          "name": "Kotlin",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 7,
+      "source": "pinned"
+    },
+    {
+      "slug": "zerobug",
+      "name": "zerobug",
+      "title": "ZeroBug",
+      "summary": "Debugging and quality assurance sandbox for tracking and resolving application issues.",
+      "repoUrl": "https://github.com/iammahmads/zerobug",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2025-04-30T15:06:29Z",
+      "language": {
+        "name": "JavaScript"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 8,
+      "source": "pinned"
+    },
+    {
+      "slug": "teachme",
+      "name": "TeachMe",
+      "title": "TeachMe",
+      "summary": "A project made with help of codex for Open AI Build Week hosted on dev post.",
+      "repoUrl": "https://github.com/iammahmads/TeachMe",
+      "liveUrl": "https://teach-me-rouge.vercel.app",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-07-17T11:13:56Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "deriv-hackathon-frontend",
+      "name": "deriv-hackathon-frontend",
+      "title": "deriv hackathon frontend",
+      "summary": "Sentinal Ai, contains frontend code",
+      "repoUrl": "https://github.com/iammahmads/deriv-hackathon-frontend",
+      "liveUrl": "https://deriv-hackathon-frontend.vercel.app",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-02-07T10:39:53Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "copilot-developer",
+      "name": "Copilot-Developer",
+      "title": "Copilot Developer",
+      "summary": "A copilot developer.",
+      "repoUrl": "https://github.com/iammahmads/Copilot-Developer",
+      "liveUrl": "https://huggingface.co/spaces/iammahmads/Copilot-Developer",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2025-07-08T12:43:55Z",
+      "language": {
+        "name": "Python"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "red-and-green-flag",
+      "name": "red-and-green-flag",
+      "title": "red and green flag",
+      "summary": "Made with Google AI Studio",
+      "repoUrl": "https://github.com/iammahmads/red-and-green-flag",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-09-30T12:24:11Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "resume-analyzer",
+      "name": "Resume-Analyzer",
+      "title": "Resume Analyzer",
+      "summary": ".",
+      "repoUrl": "https://github.com/iammahmads/Resume-Analyzer",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-05-31T13:47:48Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "deriv-hackathon-backend",
+      "name": "deriv-hackathon-backend",
+      "title": "deriv hackathon backend",
+      "summary": "Sentinal Ai, contains backend code",
+      "repoUrl": "https://github.com/iammahmads/deriv-hackathon-backend",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-02-07T10:43:23Z",
+      "language": {
+        "name": "Python"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "leetcode-solutions",
+      "name": "leetcode-solutions",
+      "title": "leetcode solutions",
+      "summary": "This repo contains the code of leetcode problems that I have solved till now.",
+      "repoUrl": "https://github.com/iammahmads/leetcode-solutions",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2025-06-23T11:40:03Z",
+      "language": {
+        "name": "Python"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "version-control-for-semester",
+      "name": "version-control-for-semester",
+      "title": "version control for semester",
+      "summary": "This repository is to demonstrate the use version control for semester project",
+      "repoUrl": "https://github.com/iammahmads/version-control-for-semester",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2025-05-18T17:12:42Z",
+      "languages": [],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "converter",
+      "name": "converter",
+      "title": "converter",
+      "summary": "This repo holds the code to convert value from one unit to another unit, based on category",
+      "repoUrl": "https://github.com/iammahmads/converter",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2024-12-07T19:39:29Z",
+      "language": {
+        "name": "TypeScript"
+      },
+      "languages": [
+        {
+          "name": "TypeScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "hardhat-fundme-ui",
+      "name": "Hardhat-FundMe-UI",
+      "title": "Hardhat FundMe UI",
+      "summary": "UI for interacting with Hardhat-FundMe repository",
+      "repoUrl": "https://github.com/iammahmads/Hardhat-FundMe-UI",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2023-12-21T07:37:53Z",
+      "language": {
+        "name": "JavaScript"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "hardhat-fundme",
+      "name": "Hardhat-FundMe",
+      "title": "Hardhat FundMe",
+      "summary": "Learnt Through Free-Code-Camp",
+      "repoUrl": "https://github.com/iammahmads/Hardhat-FundMe",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2023-12-20T11:42:39Z",
+      "language": {
+        "name": "JavaScript"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "name-generator-ai",
+      "name": "name-generator-ai",
+      "title": "name generator ai",
+      "summary": "Production-ready application developed and maintained by Muhammad Ahmad Shahid.",
+      "repoUrl": "https://github.com/iammahmads/name-generator-ai",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-11-04T01:46:19Z",
+      "language": {
+        "name": "Python"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "netmigrate",
+      "name": "NetMigrate",
+      "title": "NetMigrate",
+      "summary": "Production-ready application developed and maintained by Muhammad Ahmad Shahid.",
+      "repoUrl": "https://github.com/iammahmads/NetMigrate",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-09-27T07:57:44Z",
+      "language": {
+        "name": "JavaScript"
+      },
+      "languages": [
+        {
+          "name": "JavaScript",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "hackathon-trafficguard",
+      "name": "hackathon-trafficguard",
+      "title": "hackathon trafficguard",
+      "summary": "Production-ready application developed and maintained by Muhammad Ahmad Shahid.",
+      "repoUrl": "https://github.com/iammahmads/hackathon-trafficguard",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2026-05-20T05:46:12Z",
+      "language": {
+        "name": "Kotlin"
+      },
+      "languages": [
+        {
+          "name": "Kotlin",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    },
+    {
+      "slug": "full-stack-gift-store",
+      "name": "Full-Stack-Gift-Store",
+      "title": "Full Stack Gift Store",
+      "summary": "Production-ready application developed and maintained by Muhammad Ahmad Shahid.",
+      "repoUrl": "https://github.com/iammahmads/Full-Stack-Gift-Store",
+      "stars": 0,
+      "forks": 0,
+      "pushedAt": "2024-02-20T16:52:15Z",
+      "languages": [],
+      "topics": [],
+      "featured": false,
+      "order": 50,
+      "source": "fallback"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "@fontsource/bricolage-grotesque/400.css";
+@import "@fontsource/bricolage-grotesque/600.css";
+@import "@fontsource/bricolage-grotesque/700.css";
+@import "@fontsource/bricolage-grotesque/800.css";
+@import "@fontsource/instrument-sans/400.css";
+@import "@fontsource/instrument-sans/500.css";
+@import "@fontsource/instrument-sans/600.css";
+
+@theme {
+  --color-ink: #170B2B;
+  --color-surface: #241346;
+  --color-surface-hover: #2e1a57;
+  --color-lilac: #B9A7FF;
+  --color-aqua: #3DF2E0;
+  --color-pearl: #F3F1FA;
+  --color-amber: #FFB454;
+  --color-ink-muted: #8E82A9;
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+}
+
+:root {
+  --ink: #170B2B;
+  --surface: #241346;
+  --surface-hover: #2e1a57;
+  --lilac: #B9A7FF;
+  --aqua: #3DF2E0;
+  --pearl: #F3F1FA;
+  --amber: #FFB454;
+  --ink-muted: #8E82A9;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--pearl);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--aqua);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for sleek desktop feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lilac);
+}

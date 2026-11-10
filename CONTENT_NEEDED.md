@@ -109,3 +109,4 @@ Please confirm or correct each item below:
 18. **Analytics**:
     - Do you want privacy-focused analytics (e.g. Umami/Plausible)?
     - *Default*: None.
+
