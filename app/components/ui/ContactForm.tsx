@@ -211,11 +211,10 @@ export function ContactForm({ sourceTag, onSuccess }: ContactFormProps) {
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? "contact_name_error" : undefined}
           placeholder="e.g. Dr. Jane Doe / Sarah Khan"
-          className={`w-full px-4 py-3 rounded-xl bg-[#241346]/50 border text-[#F3F1FA] placeholder-[#8E82A9] transition-colors focus:bg-[#241346] ${
-            errors.name
-              ? "border-red-400 focus:border-red-400"
-              : "border-[#241346] focus:border-[#3DF2E0]"
-          }`}
+          className={`w-full px-4 py-3 rounded-xl bg-[#241346]/50 border text-[#F3F1FA] placeholder-[#8E82A9] transition-colors focus:bg-[#241346] ${errors.name
+            ? "border-red-400 focus:border-red-400"
+            : "border-[#241346] focus:border-[#3DF2E0]"
+            }`}
         />
         {errors.name && (
           <p id="contact_name_error" className="text-xs text-red-400">
@@ -244,11 +243,10 @@ export function ContactForm({ sourceTag, onSuccess }: ContactFormProps) {
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? "contact_email_error" : undefined}
           placeholder="name@university.edu or name@company.com"
-          className={`w-full px-4 py-3 rounded-xl bg-[#241346]/50 border text-[#F3F1FA] placeholder-[#8E82A9] transition-colors focus:bg-[#241346] ${
-            errors.email
-              ? "border-red-400 focus:border-red-400"
-              : "border-[#241346] focus:border-[#3DF2E0]"
-          }`}
+          className={`w-full px-4 py-3 rounded-xl bg-[#241346]/50 border text-[#F3F1FA] placeholder-[#8E82A9] transition-colors focus:bg-[#241346] ${errors.email
+            ? "border-red-400 focus:border-red-400"
+            : "border-[#241346] focus:border-[#3DF2E0]"
+            }`}
         />
         {errors.email && (
           <p id="contact_email_error" className="text-xs text-red-400">
@@ -277,11 +275,10 @@ export function ContactForm({ sourceTag, onSuccess }: ContactFormProps) {
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "contact_message_error" : undefined}
           placeholder="Write your inquiry, collaboration idea, or research details..."
-          className={`w-full px-4 py-3 rounded-xl bg-[#241346]/50 border text-[#F3F1FA] placeholder-[#8E82A9] transition-colors focus:bg-[#241346] ${
-            errors.message
-              ? "border-red-400 focus:border-red-400"
-              : "border-[#241346] focus:border-[#3DF2E0]"
-          }`}
+          className={`w-full px-4 py-3 rounded-xl bg-[#241346]/50 border text-[#F3F1FA] placeholder-[#8E82A9] transition-colors focus:bg-[#241346] ${errors.message
+            ? "border-red-400 focus:border-red-400"
+            : "border-[#241346] focus:border-[#3DF2E0]"
+            }`}
         />
         <div className="flex items-center justify-between text-xs">
           {errors.message ? (

@@ -8,9 +8,6 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <p className="text-sm text-[#F3F1FA] font-medium">{site.name}</p>
-          <p className="text-xs text-[#8E82A9] mt-1">
-            Built with React 19, React Router, Three.js & Tailwind CSS.
-          </p>
         </div>
 
         <ul className="flex items-center gap-6 text-sm">

@@ -56,6 +56,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://iammahmads.github.io/projects/iammahmads-github-io</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://iammahmads.github.io/projects/teachme</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

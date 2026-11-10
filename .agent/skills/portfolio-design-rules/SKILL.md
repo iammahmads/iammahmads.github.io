@@ -2,7 +2,7 @@
 name: portfolio-design-rules
 description: Design and copy rules for this portfolio. Use when creating or changing any UI, style or text.
 ---
-- Follow section 4 of PLAN.md: tokens, type, one loud 3D moment, everything else calm.
+- Design rules: tokens in app/app.css, display/body typography, one loud 3D moment, everything else calm.
 - Aqua is the only interactive colour. No decorative gradient washes.
 - No ALL-CAPS eyebrow labels, no one-word headline accents, no numbering unless content is a sequence.
 - No fade-up on every section. Motion only for the hero reveal, scroll-linked 3D, and user actions.
