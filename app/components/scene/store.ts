@@ -78,3 +78,4 @@ export function detectPerformanceTier(): PerformanceTier {
 
   return 2;
 }
+

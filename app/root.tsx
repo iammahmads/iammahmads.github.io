@@ -11,6 +11,7 @@ import { Nav } from "~/components/ui/Nav";
 import { Footer } from "~/components/ui/Footer";
 import { SkipLink } from "~/components/ui/SkipLink";
 import { Scene } from "~/components/scene/Scene";
+import { SmoothScroll } from "~/components/ui/SmoothScroll";
 import { site } from "~/content/site";
 import "~/app.css";
 
@@ -41,6 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="bg-[#170B2B] text-[#F3F1FA] antialiased min-h-screen flex flex-col relative selection:bg-[#3DF2E0] selection:text-[#170B2B]">
         <SkipLink />
         <Scene />
+        <SmoothScroll />
         <Nav />
         <main id="main-content" className="flex-1 relative z-10 pt-16">
           {children}
@@ -83,4 +85,3 @@ export function ErrorBoundary({ error }: { error: unknown }) {
     </div>
   );
 }
-

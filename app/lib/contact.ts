@@ -44,4 +44,3 @@ export async function sendContact(input: ContactInput): Promise<ContactResult> {
     clearTimeout(timer);
   }
 }
-

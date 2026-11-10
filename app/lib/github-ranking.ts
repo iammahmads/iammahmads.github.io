@@ -43,3 +43,4 @@ export function rankRepos<T extends RepoMetadata>(
     return scoreRepo(b) - scoreRepo(a);
   });
 }
+

@@ -89,3 +89,4 @@ describe("GitHub Ranking & Fallback Logic", () => {
     expect(snapshotRaw.fetchedAt).toBeDefined();
   });
 });
+

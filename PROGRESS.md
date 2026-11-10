@@ -80,6 +80,25 @@
 - **Verification & Performance Metrics:**
   - Lazy 3D chunk: **243.7 KB gzipped** (well within budget target of <450 KB gzipped).
   - Pre-rendered HTML contains zero `<canvas>` tags.
-  - Zero memory leaks: all geometries and materials disposed on unmount.
-  - Clean client-only mounting inside `Suspense` without blocking first contentful paint.
-- **Next Phase:** Phase 5 (Home Sections: Hero, Intro, Showcase, Capabilities, EducationTeaser, ContactForm).
+
+---
+
+## Phase 5: Home Sections & Hardened Contact (Complete)
+
+- **Date:** 10 November 2026
+- **Sections Implemented:**
+  - `Hero` (`app/components/sections/Hero.tsx`): High-contrast headline in Bricolage Grotesque, approved Option 3 tagline, availability pill badge, dual CTA buttons.
+  - `Intro` (`app/components/sections/Intro.tsx`): First-person engineering statement, high-resolution portrait with `<picture>`, metrics display.
+  - `Showcase` (`app/components/sections/Showcase.tsx`): Pinned featured projects (`FypGuard`, `short-url`, `dev-ecommerce`, `code_commenter`, `erc-8004-hackathon`) with preview images, topic tags, and direct demo/GitHub links.
+  - `Capabilities` (`app/components/sections/Capabilities.tsx`): Domain-grouped capabilities with interactive hover highlights connecting skills to verified evidence repositories.
+  - `EducationTeaser` (`app/components/sections/EducationTeaser.tsx`): Direct link and preview card for postgraduate study plans.
+  - `Contact` (`app/components/sections/Contact.tsx`) & `ContactForm` (`app/components/ui/ContactForm.tsx`):
+    - Hardened submission to the owner's Google Form with entry ID mapping (`entry.2005620554`, `entry.1045781291`, `entry.839337160`).
+    - Full error handling, draft preservation on failure, honeypot protection, minimum fill time guard, and 60s submission cooldown.
+    - Honest wording: "Message sent. Thank you."
+    - Direct email link and copy-to-clipboard button with visual feedback.
+  - `SmoothScroll` (`app/components/ui/SmoothScroll.tsx`): Lenis smooth scrolling that respects `prefers-reduced-motion` and native anchor navigation.
+- **Verification:**
+  - 12 unit tests passing (`tests/contact-form.spec.ts`, `tests/contact.spec.ts`, `tests/github.spec.ts`, `tests/github-ranking.spec.ts`).
+  - Pre-rendered HTML builds cleanly in 334ms.
+- **Next Phase:** Phase 6 (Projects index with technology filtering & detail pages with markdown rendering).
