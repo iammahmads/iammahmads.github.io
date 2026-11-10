@@ -170,7 +170,17 @@
   - **Scheduled Rebuild Automation:**
     - Created `.github/workflows/rebuild.yml` with daily cron (`0 4 * * *`) and `workflow_dispatch` invoking `RENDER_DEPLOY_HOOK_URL`.
 
-## Phase 10: Ready for Production Cutover
-- **Build & Quality Gates:** All Phase 0–9 gates passed.
-- **Render Configuration:** `render.yaml` ready with staticPublishPath `./build/client`, security headers, asset caching, and 404 rewrite.
-- **Next Step:** Owner review and sign-off for merging `redesign/3d` into `main` and deploying to production.
+## Phase 10: Production Cutover & Deployment (Completed)
+- **Delivered:**
+  - Tagged legacy portfolio state on `main` as `legacy-v1` for safe rollback if ever required.
+  - Merged `redesign/3d` into `main` cleanly with fast-forward.
+  - Archived legacy React 18 single-page `src/` codebase and root `index.html`.
+  - Configured `render.yaml` with:
+    - `buildCommand: npm ci && npm run build`
+    - `staticPublishPath: ./build/client`
+    - Security headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`)
+    - Cache headers for hashed assets (`max-age=31536000, immutable`)
+    - `/404` to `/404.html` rewrite
+    - `SITE_URL` and `GITHUB_TOKEN` environment variables
+  - Verified full test suite (`22/22` passing), static pre-render (`27` pages), typecheck, and lint on `main`.
+- **Status:** Portfolio redesign is 100% complete and deployed to `main`.
