@@ -20,11 +20,10 @@ export function Nav() {
             <li>
               <Link
                 to="/projects"
-                className={`transition-colors py-1 hover:text-[#3DF2E0] ${
-                  location.pathname.startsWith("/projects")
-                    ? "text-[#3DF2E0] font-semibold border-b-2 border-[#3DF2E0]"
-                    : "text-[#B9A7FF]"
-                }`}
+                className={`transition-colors py-1 hover:text-[#3DF2E0] ${location.pathname.startsWith("/projects")
+                  ? "text-[#3DF2E0] font-semibold border-b-2 border-[#3DF2E0]"
+                  : "text-[#B9A7FF]"
+                  }`}
               >
                 Projects
               </Link>
@@ -32,11 +31,10 @@ export function Nav() {
             <li>
               <Link
                 to="/education"
-                className={`transition-colors py-1 hover:text-[#3DF2E0] ${
-                  location.pathname === "/education"
-                    ? "text-[#3DF2E0] font-semibold border-b-2 border-[#3DF2E0]"
-                    : "text-[#B9A7FF]"
-                }`}
+                className={`transition-colors py-1 hover:text-[#3DF2E0] ${location.pathname === "/education"
+                  ? "text-[#3DF2E0] font-semibold border-b-2 border-[#3DF2E0]"
+                  : "text-[#B9A7FF]"
+                  }`}
               >
                 Education
               </Link>
@@ -57,7 +55,7 @@ export function Nav() {
                 className="text-[#B9A7FF] hover:text-[#3DF2E0] transition-colors py-1 inline-flex items-center gap-1"
               >
                 <span>CV</span>
-                <span className="text-xs">&nearr;</span>
+                <span className="text-xs">&uarr;</span>
               </a>
             </li>
           </ul>

@@ -37,7 +37,7 @@ export function Hero() {
             size="lg"
             variant="ghost"
           >
-            View CV &nearr;
+            View CV &uarr;
           </Button>
         </div>
       </div>

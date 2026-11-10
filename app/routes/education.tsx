@@ -101,7 +101,7 @@ export default function EducationRoute() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-sm font-semibold text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors shrink-0 self-start sm:self-end"
             >
               <span>View Curriculum Vitae</span>
-              <span className="text-base leading-none">&nearr;</span>
+              <span className="text-base leading-none">&rarr;</span>
             </a>
           )}
         </div>
@@ -382,7 +382,7 @@ export default function EducationRoute() {
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-xs text-[#3DF2E0] font-semibold hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors shrink-0"
                 >
                   <span>View PDF</span>
-                  <span className="text-sm leading-none">&nearr;</span>
+                  <span className="text-sm leading-none">&uarr;</span>
                 </a>
               ) : (
                 <a
