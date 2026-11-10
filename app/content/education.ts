@@ -136,8 +136,13 @@ export const education: EducationData = {
   ],
   documents: [
     {
+      label: "Curriculum Vitae",
+      href: "https://drive.google.com/file/d/1tK1ghdlTtlsmHn5A8Lvr4gahVW34P2e_/view?usp=drive_link",
+      note: "Comprehensive overview of academic background, coursework, and research focus.",
+    },
+    {
       label: "Academic Transcripts & References",
-      href: "#contact",
+      href: "#education-contact",
       note: "Available on request for admissions committees and prospective advisors.",
     },
   ],

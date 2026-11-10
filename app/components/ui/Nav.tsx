@@ -49,6 +49,17 @@ export function Nav() {
                 Contact
               </a>
             </li>
+            <li>
+              <a
+                href={site.links.cv}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B9A7FF] hover:text-[#3DF2E0] transition-colors py-1 inline-flex items-center gap-1"
+              >
+                <span>CV</span>
+                <span className="text-xs">&nearr;</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

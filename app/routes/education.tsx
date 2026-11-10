@@ -76,20 +76,34 @@ export default function EducationRoute() {
           {education.intent.statement}
         </p>
 
-        <div className="pt-2 space-y-2">
-          <p className="text-xs text-[#8E82A9]">
-            Intended fields of study
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {education.intent.fields.map((field) => (
-              <span
-                key={field}
-                className="px-3.5 py-1.5 rounded-xl bg-[#241346] text-[#F3F1FA] text-sm font-medium border border-[#241346]"
-              >
-                {field}
-              </span>
-            ))}
+        <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="space-y-2">
+            <p className="text-xs text-[#8E82A9]">
+              Intended fields of study
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {education.intent.fields.map((field) => (
+                <span
+                  key={field}
+                  className="px-3.5 py-1.5 rounded-xl bg-[#241346] text-[#F3F1FA] text-sm font-medium border border-[#241346]"
+                >
+                  {field}
+                </span>
+              ))}
+            </div>
           </div>
+
+          {education.documents[0]?.href.startsWith("http") && (
+            <a
+              href={education.documents[0].href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-sm font-semibold text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors shrink-0 self-start sm:self-end"
+            >
+              <span>View Curriculum Vitae</span>
+              <span className="text-base leading-none">&nearr;</span>
+            </a>
+          )}
         </div>
       </section>
 
@@ -360,12 +374,24 @@ export default function EducationRoute() {
                 <p className="text-base font-bold text-[#F3F1FA]">{doc.label}</p>
                 {doc.note && <p className="text-xs text-[#8E82A9] mt-0.5">{doc.note}</p>}
               </div>
-              <a
-                href="#education-contact"
-                className="inline-flex items-center text-xs text-[#3DF2E0] font-semibold hover:underline shrink-0"
-              >
-                Request via Contact Block &rarr;
-              </a>
+              {doc.href.startsWith("http") ? (
+                <a
+                  href={doc.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-xs text-[#3DF2E0] font-semibold hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors shrink-0"
+                >
+                  <span>View PDF</span>
+                  <span className="text-sm leading-none">&nearr;</span>
+                </a>
+              ) : (
+                <a
+                  href={doc.href}
+                  className="inline-flex items-center text-xs text-[#3DF2E0] font-semibold hover:underline shrink-0"
+                >
+                  Request via Contact Block &rarr;
+                </a>
+              )}
             </div>
           ))}
         </div>

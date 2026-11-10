@@ -49,6 +49,16 @@ export function Footer() {
               Email
             </a>
           </li>
+          <li>
+            <a
+              href={site.links.cv}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#3DF2E0] transition-colors"
+            >
+              CV
+            </a>
+          </li>
         </ul>
 
         <p className="text-xs text-[#8E82A9]">

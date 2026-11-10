@@ -31,6 +31,14 @@ export function Hero() {
           <Button to="/education" size="lg" variant="secondary">
             Education and Master's plans
           </Button>
+          <Button
+            href={site.links.cv}
+            external
+            size="lg"
+            variant="ghost"
+          >
+            View CV &nearr;
+          </Button>
         </div>
       </div>
     </section>
