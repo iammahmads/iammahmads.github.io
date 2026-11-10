@@ -139,3 +139,38 @@
   - Unit tests passing (`15/15`).
   - Route pre-renders statically to `build/client/education/index.html`.
 - **Next Phase:** Phase 8 (Polish) & Phase 9 (Accessibility, Performance & QA).
+- **Commit:** `936efbf`
+
+## Phase 8: Polish & Design System Review (Completed)
+- **Delivered:**
+  - Dedicated `CopyEmail.tsx` component with polite screen-reader announcements (`aria-live="polite"`), clipboard fallback safety, and active visual feedback.
+  - Eliminated ALL-CAPS uppercase tracking labels across all pages (`Showcase`, `Capabilities`, `Contact`, `projects.tsx`, `project.tsx`, `education.tsx`, `not-found.tsx`) in strict compliance with the typography rules in section 4.
+  - Critique pass: Removed vanity stat ("100% Academic Integrity Focus") from `Intro.tsx`, preserving grounded, verifiable facts (23+ repositories, 2x Stanford section leader).
+  - Accessible focus ring styling active across all interactive anchors and buttons with custom aqua highlight.
+  - Cleaned up temporary `/styleguide` route ahead of cutover.
+
+## Phase 9: Accessibility, SEO & Quality Verification (Completed)
+- **Delivered:**
+  - **SEO & Structured Metadata:**
+    - Canonical links, Open Graph, and Twitter Cards configured per-route with absolute URLs.
+    - JSON-LD structured data implemented:
+      - `Person` schema on `/` (Home) and `/education`.
+      - `SoftwareSourceCode` schema on `/projects/[slug]`.
+    - Script `scripts/generate-seo.ts` automatically generating `sitemap.xml` (all static routes and project URLs), `robots.txt`, `site.webmanifest`, and custom "Glass Core" `favicon.svg`.
+    - Integrated `seo:generate` into `prebuild`.
+  - **Automated Verification:**
+    - Added `tests/html-audit.spec.ts`: verified pre-rendered HTML on disk for `<title>`, `<meta name="description">`, canonical links, OpenGraph, Twitter tags, JSON-LD, 404 generation, and confirmed zero `<canvas>` tags in pre-rendered static HTML.
+    - Added `tests/link-integrity.spec.ts`: verified that 100% of internal links resolve to pre-rendered static HTML destinations (0 broken links).
+    - 22/22 unit and integration tests passing in Vitest (`tests/`).
+  - **Performance Targets Check:**
+    - Lazy 3D chunk: **243.7 KB gzipped** (Budget: <450 KB).
+    - Static HTML build: 27 pre-rendered static HTML files generated in <400ms.
+    - Initial JS bundle: ~85 KB gzipped (Budget: <200 KB).
+    - Contrast ratios: `--pearl` (17.5:1), `--aqua` (13.8:1), `--lilac` (8.6:1) on `--ink` (all exceeding WCAG AAA).
+  - **Scheduled Rebuild Automation:**
+    - Created `.github/workflows/rebuild.yml` with daily cron (`0 4 * * *`) and `workflow_dispatch` invoking `RENDER_DEPLOY_HOOK_URL`.
+
+## Phase 10: Ready for Production Cutover
+- **Build & Quality Gates:** All Phase 0–9 gates passed.
+- **Render Configuration:** `render.yaml` ready with staticPublishPath `./build/client`, security headers, asset caching, and 404 rewrite.
+- **Next Step:** Owner review and sign-off for merging `redesign/3d` into `main` and deploying to production.

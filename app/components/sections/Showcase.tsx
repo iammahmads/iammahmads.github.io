@@ -12,8 +12,8 @@ export function Showcase() {
     <section className="px-6 max-w-6xl mx-auto py-16 space-y-12">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#241346] pb-6">
         <div className="space-y-2">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-            Curated Work
+          <span className="text-xs font-semibold text-[#3DF2E0]">
+            Curated work
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Featured Projects

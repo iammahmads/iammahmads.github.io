@@ -1,22 +1,14 @@
-import { useState } from "react";
 import { site } from "~/content/site";
 import { ContactForm } from "~/components/ui/ContactForm";
+import { CopyEmail } from "~/components/ui/CopyEmail";
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(site.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
-  };
-
   return (
     <section id="contact" className="px-6 max-w-6xl mx-auto py-20 scroll-mt-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-5 space-y-6">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-            Initiate Collaboration
+          <span className="text-xs font-semibold text-[#3DF2E0]">
+            Contact
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Let's build together.
@@ -28,23 +20,8 @@ export function Contact() {
 
           <div className="space-y-4 pt-4 border-t border-[#241346]">
             <div>
-              <p className="text-xs text-[#8E82A9]">Direct Email</p>
-              <div className="flex items-center gap-3 mt-1">
-                <a
-                  href={`mailto:${site.email}`}
-                  className="text-lg font-medium text-[#F3F1FA] hover:text-[#3DF2E0] transition-colors"
-                >
-                  {site.email}
-                </a>
-                <button
-                  type="button"
-                  onClick={handleCopyEmail}
-                  className="px-2.5 py-1 rounded bg-[#241346] text-xs text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors font-semibold cursor-pointer"
-                  aria-label="Copy email address"
-                >
-                  {copied ? "Copied!" : "Copy"}
-                </button>
-              </div>
+              <p className="text-xs text-[#8E82A9] mb-1">Direct email</p>
+              <CopyEmail />
             </div>
 
             <div>

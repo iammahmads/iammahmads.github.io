@@ -9,7 +9,10 @@ export const site = {
     "Full-stack software engineer crafting robust applications and preparing for advanced research."
   ],
   bio: "Software engineering graduate from GCUF with experience developing full-stack web platforms, developer tooling, and intelligent systems. Former Code in Place section leader and open to postgraduate research.",
-  url: process.env.SITE_URL || "https://muhammadahmad.onrender.com",
+  url:
+    typeof process !== "undefined" && process.env?.SITE_URL
+      ? process.env.SITE_URL
+      : "https://muhammadahmad.onrender.com",
   email: "mahmads0323@gmail.com",
   links: {
     github: "https://github.com/iammahmads",

@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
   isRouteErrorResponse,
 } from "react-router";
-import type { MetaFunction } from "react-router";
+import type { MetaFunction, LinksFunction } from "react-router";
 import { Nav } from "~/components/ui/Nav";
 import { Footer } from "~/components/ui/Footer";
 import { SkipLink } from "~/components/ui/SkipLink";
@@ -14,6 +14,11 @@ import { Scene } from "~/components/scene/Scene";
 import { SmoothScroll } from "~/components/ui/SmoothScroll";
 import { site } from "~/content/site";
 import "~/app.css";
+
+export const links: LinksFunction = () => [
+  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+  { rel: "manifest", href: "/site.webmanifest" },
+];
 
 export const meta: MetaFunction = () => [
   { charSet: "utf-8" },

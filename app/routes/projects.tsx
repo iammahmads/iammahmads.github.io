@@ -7,13 +7,21 @@ import { Chip } from "~/components/ui/Chip";
 import type { Project } from "~/lib/github.schema";
 
 export const meta: MetaFunction = () => [
-  { title: `Projects — ${site.name}` },
+  { title: `Projects & Systems — ${site.name}` },
   {
     name: "description",
     content: "Curated open-source projects, web applications, and developer tooling by Muhammad Ahmad Shahid.",
   },
-  { property: "og:title", content: `Projects — ${site.name}` },
+  { tagName: "link", rel: "canonical", href: `${site.url}/projects` },
+  { property: "og:type", content: "website" },
+  { property: "og:url", content: `${site.url}/projects` },
+  { property: "og:title", content: `Projects & Systems — ${site.name}` },
   { property: "og:description", content: "Curated open-source projects, web applications, and developer tooling by Muhammad Ahmad Shahid." },
+  { property: "og:image", content: `${site.url}/muhammad-ahmad-shahid.jpeg` },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:title", content: `Projects & Systems — ${site.name}` },
+  { name: "twitter:description", content: "Curated open-source projects, web applications, and developer tooling by Muhammad Ahmad Shahid." },
+  { name: "twitter:image", content: `${site.url}/muhammad-ahmad-shahid.jpeg` },
 ];
 
 export default function ProjectsRoute() {
@@ -65,8 +73,8 @@ export default function ProjectsRoute() {
     <div className="max-w-6xl mx-auto px-6 py-12 space-y-12">
       {/* Header */}
       <header className="space-y-4 max-w-3xl">
-        <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-          Software &amp; Systems
+        <span className="text-xs font-semibold text-[#3DF2E0]">
+          Software &amp; systems
         </span>
         <h1 className="text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
           All Projects
@@ -161,8 +169,8 @@ export default function ProjectsRoute() {
         {/* Live Hover Preview Panel (Desktop) */}
         <div className="hidden lg:block lg:col-span-4 sticky top-24">
           <div className="p-6 rounded-3xl bg-[#241346]/60 border border-[#241346] backdrop-blur-md space-y-4">
-            <span className="text-xs uppercase tracking-wider text-[#8E82A9] font-mono">
-              Live Preview
+            <span className="text-xs text-[#8E82A9] font-medium">
+              Live preview
             </span>
 
             {hoveredProject ? (

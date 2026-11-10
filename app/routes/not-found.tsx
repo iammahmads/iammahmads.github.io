@@ -12,7 +12,7 @@ export default function NotFoundRoute() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 space-y-6">
       <div className="space-y-2">
-        <p className="text-xs uppercase tracking-widest text-[#3DF2E0] font-semibold">
+        <p className="text-xs text-[#3DF2E0] font-semibold">
           Error 404
         </p>
         <h1 className="text-5xl sm:text-7xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">

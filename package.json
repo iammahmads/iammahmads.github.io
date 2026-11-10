@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "github:sync": "tsx scripts/github-sync.ts",
-    "prebuild": "npm run github:sync",
+    "seo:generate": "tsx scripts/generate-seo.ts",
+    "prebuild": "npm run github:sync && npm run seo:generate",
     "postbuild": "node scripts/postbuild.mjs",
     "preview": "npx serve build/client",
     "images": "node scripts/optimize-images.mjs"

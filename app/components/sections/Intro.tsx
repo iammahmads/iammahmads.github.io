@@ -31,12 +31,6 @@ export function Intro() {
               </span>
               <span className="text-[#8E82A9] text-xs">Code in Place Section Leader</span>
             </div>
-            <div>
-              <span className="block text-2xl font-bold text-[#FFB454] font-['Bricolage_Grotesque']">
-                100%
-              </span>
-              <span className="text-[#8E82A9] text-xs">Academic Integrity Focus</span>
-            </div>
           </div>
         </div>
 

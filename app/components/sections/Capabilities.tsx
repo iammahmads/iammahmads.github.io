@@ -7,8 +7,8 @@ export function Capabilities() {
   return (
     <section className="px-6 max-w-6xl mx-auto py-16 space-y-12">
       <div className="space-y-3 border-b border-[#241346] pb-6">
-        <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-          Technical Stack
+        <span className="text-xs font-semibold text-[#3DF2E0]">
+          Technical stack
         </span>
         <h2 className="text-3xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
           Engineering Capabilities

@@ -12,8 +12,16 @@ export const meta: MetaFunction = () => [
     name: "description",
     content: "Academic record, research focus, and graduate study intent of Muhammad Ahmad Shahid.",
   },
+  { tagName: "link", rel: "canonical", href: `${site.url}/education` },
+  { property: "og:type", content: "website" },
+  { property: "og:url", content: `${site.url}/education` },
   { property: "og:title", content: `Education & Postgraduate Research — ${site.name}` },
   { property: "og:description", content: "Academic record, research focus, and graduate study intent of Muhammad Ahmad Shahid." },
+  { property: "og:image", content: `${site.url}/muhammad-ahmad-shahid.jpeg` },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:title", content: `Education & Postgraduate Research — ${site.name}` },
+  { name: "twitter:description", content: "Academic record, research focus, and graduate study intent of Muhammad Ahmad Shahid." },
+  { name: "twitter:image", content: `${site.url}/muhammad-ahmad-shahid.jpeg` },
 ];
 
 export default function EducationRoute() {
@@ -69,8 +77,8 @@ export default function EducationRoute() {
         </p>
 
         <div className="pt-2 space-y-2">
-          <p className="text-xs uppercase tracking-wider text-[#8E82A9] font-mono">
-            Intended Fields of Study
+          <p className="text-xs text-[#8E82A9]">
+            Intended fields of study
           </p>
           <div className="flex flex-wrap gap-2">
             {education.intent.fields.map((field) => (
@@ -88,8 +96,8 @@ export default function EducationRoute() {
       {/* 2. Focus and Evidence */}
       <section className="space-y-8 border-t border-[#241346] pt-12">
         <div className="space-y-2">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-            Academic Focus
+          <span className="text-xs font-semibold text-[#3DF2E0]">
+            Academic focus
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Research Interests &amp; Concrete Evidence
@@ -140,7 +148,7 @@ export default function EducationRoute() {
       {/* 3. Academic Record */}
       <section className="space-y-8 border-t border-[#241346] pt-12">
         <div className="space-y-2">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
+          <span className="text-xs font-semibold text-[#3DF2E0]">
             Degrees
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
@@ -170,8 +178,8 @@ export default function EducationRoute() {
 
               {deg.highlights && deg.highlights.length > 0 && (
                 <div className="space-y-2">
-                  <p className="text-xs uppercase tracking-wider text-[#8E82A9] font-mono">
-                    Key Highlights
+                  <p className="text-xs text-[#8E82A9]">
+                    Key highlights
                   </p>
                   <ul className="list-disc list-inside space-y-1.5 text-sm text-[#F3F1FA]/80">
                     {deg.highlights.map((h, idx) => (
@@ -183,8 +191,8 @@ export default function EducationRoute() {
 
               {deg.coursework && deg.coursework.length > 0 && (
                 <div className="space-y-2">
-                  <p className="text-xs uppercase tracking-wider text-[#8E82A9] font-mono">
-                    Relevant Coursework
+                  <p className="text-xs text-[#8E82A9]">
+                    Relevant coursework
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {deg.coursework.map((course) => (
@@ -202,8 +210,8 @@ export default function EducationRoute() {
               {deg.finalProject && (
                 <div className="p-6 rounded-2xl bg-[#170B2B]/70 border border-[#3DF2E0]/30 space-y-3">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="text-xs uppercase tracking-wider text-[#3DF2E0] font-bold">
-                      Final Year Capstone Project
+                    <span className="text-xs text-[#3DF2E0] font-bold">
+                      Final year capstone project
                     </span>
                     {deg.finalProject.link && (
                       <a
@@ -232,7 +240,7 @@ export default function EducationRoute() {
       {/* 4. Journey Timeline */}
       <section className="space-y-8 border-t border-[#241346] pt-12">
         <div className="space-y-2">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
+          <span className="text-xs font-semibold text-[#3DF2E0]">
             Chronology
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
@@ -248,7 +256,7 @@ export default function EducationRoute() {
                 <span className="text-xs font-semibold text-[#3DF2E0] font-mono">
                   {item.date}
                 </span>
-                <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-[#241346] text-[#B9A7FF]">
+                <span className="text-xs px-2 py-0.5 rounded bg-[#241346] text-[#B9A7FF] capitalize">
                   {item.kind}
                 </span>
               </div>
@@ -269,8 +277,8 @@ export default function EducationRoute() {
       {education.research && education.research.length > 0 && (
         <section className="space-y-8 border-t border-[#241346] pt-12">
           <div className="space-y-2">
-            <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-              Publications &amp; Writing
+            <span className="text-xs font-semibold text-[#3DF2E0]">
+              Publications &amp; writing
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
               Research &amp; Preprints
@@ -285,7 +293,7 @@ export default function EducationRoute() {
               >
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs text-[#3DF2E0] uppercase font-mono">{item.type}</span>
+                    <span className="text-xs text-[#3DF2E0] font-medium capitalize">{item.type}</span>
                     {item.year && <span className="text-xs text-[#8E82A9]">· {item.year}</span>}
                   </div>
                   <h3 className="text-lg font-bold text-[#F3F1FA] mt-1">{item.title}</h3>
@@ -309,7 +317,7 @@ export default function EducationRoute() {
       {/* 5. Credentials */}
       <section className="space-y-8 border-t border-[#241346] pt-12">
         <div className="space-y-2">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
+          <span className="text-xs font-semibold text-[#3DF2E0]">
             Certifications
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
@@ -334,8 +342,8 @@ export default function EducationRoute() {
       {/* 6. Documents */}
       <section className="space-y-6 border-t border-[#241346] pt-12">
         <div className="space-y-2">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
-            Academic Materials
+          <span className="text-xs font-semibold text-[#3DF2E0]">
+            Academic materials
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Official Documents &amp; References
@@ -366,7 +374,7 @@ export default function EducationRoute() {
       {/* 7. Contact for Admissions and Supervisors */}
       <section id="education-contact" className="space-y-8 border-t border-[#241346] pt-12 scroll-mt-24">
         <div className="space-y-3">
-          <span className="text-xs font-semibold text-[#3DF2E0] uppercase tracking-wider">
+          <span className="text-xs font-semibold text-[#3DF2E0]">
             Inquiries
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">

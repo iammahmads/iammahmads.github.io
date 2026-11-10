@@ -1,0 +1,16 @@
+{
+  "name": "Muhammad Ahmad Shahid — Software Engineer",
+  "short_name": "Ahmad Shahid",
+  "description": "Full-stack software engineer crafting robust applications and preparing for advanced research.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#170B2B",
+  "theme_color": "#170B2B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

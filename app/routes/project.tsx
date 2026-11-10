@@ -9,16 +9,25 @@ import { rewriteRelativeUrls, sanitizeSchema } from "~/lib/markdown";
 import type { Project } from "~/lib/github.schema";
 
 export const meta: MetaFunction = ({ params }) => {
-  const slug = params.slug;
+  const slug = params.slug || "";
   const project = (snapshot.projects as Project[]).find((p) => p.slug === slug);
   const title = project ? `${project.title} — ${site.name}` : `Project — ${site.name}`;
   const description = project?.summary || site.tagline;
+  const canonicalUrl = `${site.url}/projects/${slug}`;
 
   return [
     { title },
     { name: "description", content: description },
+    { tagName: "link", rel: "canonical", href: canonicalUrl },
+    { property: "og:type", content: "article" },
+    { property: "og:url", content: canonicalUrl },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
+    { property: "og:image", content: `${site.url}/muhammad-ahmad-shahid.jpeg` },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: `${site.url}/muhammad-ahmad-shahid.jpeg` },
   ];
 };
 
@@ -55,8 +64,27 @@ export default function ProjectDetailRoute() {
     ? rewriteRelativeUrls(project.readme, project.name)
     : null;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    name: project.title,
+    description: project.summary,
+    codeRepository: project.repoUrl,
+    programmingLanguage: project.language?.name,
+    author: {
+      "@type": "Person",
+      name: site.name,
+      url: site.url,
+    },
+  };
+
   return (
     <article className="max-w-4xl mx-auto px-6 py-12 space-y-12">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Back Link */}
       <nav aria-label="Breadcrumb">
         <Link
@@ -116,8 +144,8 @@ export default function ProjectDetailRoute() {
           </div>
         ) : (
           <div className="p-12 rounded-3xl bg-gradient-to-br from-[#241346]/80 to-[#170B2B] border border-[#241346] space-y-4">
-            <span className="text-xs font-mono text-[#3DF2E0] uppercase tracking-wider">
-              Technical Profile
+            <span className="text-xs text-[#3DF2E0] font-medium">
+              Technical profile
             </span>
             <p className="text-2xl font-bold text-[#F3F1FA] font-['Bricolage_Grotesque']">
               {project.name}
@@ -173,8 +201,8 @@ export default function ProjectDetailRoute() {
             to={`/projects/${prevProject.slug}`}
             className="p-4 rounded-2xl bg-[#241346]/30 border border-[#241346] hover:border-[#3DF2E0]/40 transition-colors text-left space-y-1 group"
           >
-            <span className="text-[10px] text-[#8E82A9] uppercase font-mono block">
-              &larr; Previous Project
+            <span className="text-xs text-[#8E82A9] block">
+              &larr; Previous project
             </span>
             <span className="text-sm font-bold text-[#F3F1FA] group-hover:text-[#3DF2E0] transition-colors block">
               {prevProject.title}
@@ -187,8 +215,8 @@ export default function ProjectDetailRoute() {
             to={`/projects/${nextProject.slug}`}
             className="p-4 rounded-2xl bg-[#241346]/30 border border-[#241346] hover:border-[#3DF2E0]/40 transition-colors text-right space-y-1 group sm:ml-auto"
           >
-            <span className="text-[10px] text-[#8E82A9] uppercase font-mono block">
-              Next Project &rarr;
+            <span className="text-xs text-[#8E82A9] block">
+              Next project &rarr;
             </span>
             <span className="text-sm font-bold text-[#F3F1FA] group-hover:text-[#3DF2E0] transition-colors block">
               {nextProject.title}
