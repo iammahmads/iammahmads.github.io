@@ -24,4 +24,9 @@ services:
       - type: rewrite
         source: /404
         destination: /404.html
+    envVars:
+      - key: SITE_URL
+        value: https://muhammadahmad.onrender.com
+      - key: GITHUB_TOKEN
+        sync: false
 
