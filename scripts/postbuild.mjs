@@ -17,3 +17,7 @@ if (fs.existsSync(notFoundHtml)) {
   }
 }
 
+// Write .nojekyll for GitHub Pages
+fs.writeFileSync(path.join(clientDir, ".nojekyll"), "");
+console.log("Successfully created build/client/.nojekyll for GitHub Pages");
+

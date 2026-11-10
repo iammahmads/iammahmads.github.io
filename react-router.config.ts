@@ -4,6 +4,7 @@ import path from "node:path";
 
 export default {
   ssr: false,
+  basename: process.env.BASE_PATH || "/",
   async prerender() {
     const baseRoutes = ["/", "/projects", "/education", "/404"];
     const snapshotPath = path.resolve(process.cwd(), "app/content/github.snapshot.json");

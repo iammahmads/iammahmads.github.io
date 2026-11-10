@@ -12,7 +12,7 @@ export const site = {
   url:
     typeof process !== "undefined" && process.env?.SITE_URL
       ? process.env.SITE_URL
-      : "https://muhammadahmad.onrender.com",
+      : "https://iammahmads.github.io",
   email: "mahmads0323@gmail.com",
   links: {
     github: "https://github.com/iammahmads",
