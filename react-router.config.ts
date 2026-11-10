@@ -5,7 +5,7 @@ import path from "node:path";
 export default {
   ssr: false,
   async prerender() {
-    const baseRoutes = ["/", "/projects", "/education", "/404"];
+    const baseRoutes = ["/", "/projects", "/education", "/styleguide", "/404"];
     const snapshotPath = path.resolve(process.cwd(), "app/content/github.snapshot.json");
     if (fs.existsSync(snapshotPath)) {
       try {

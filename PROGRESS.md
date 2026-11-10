@@ -38,4 +38,26 @@
   - `npm run lint` passing (0 errors).
   - `npm run typecheck` passing (0 errors).
   - `npm run build` succeeds in ~300ms.
-- **Next Phase:** Phase 2 (Design System & Styleguide).
+
+---
+
+## Phase 2: Design System & Styleguide (Complete)
+
+- **Date:** 10 November 2026
+- **Concept:** "Glass Core" — deep atmospheric aubergine (`#170B2B`), structural surfaces (`#241346`), secondary lilac text accents (`#B9A7FF`), and a single interactive aqua accent (`#3DF2E0`).
+- **Typography:**
+  - Display: `Bricolage Grotesque` (variable font, width axis, expressive headlines).
+  - Body: `Instrument Sans` (clean, contemporary, human sans-serif).
+  - Type scale: 1.250 ratio, max line length 75ch.
+- **Components Implemented:**
+  - `Button` (`app/components/ui/Button.tsx`): Primary (aqua fill, ink text), Secondary (surface fill, lilac border), Ghost. Full keyboard focus, disabled states, router/anchor polymorphism.
+  - `Chip` (`app/components/ui/Chip.tsx`): Interactive technology badge with count, toggle states, accessible aria-pressed.
+  - `Nav` (`app/components/ui/Nav.tsx`): Fixed backdrop-blur navbar with Glass Core styling, active route indication.
+  - `Footer` (`app/components/ui/Footer.tsx`): Semantic footer with verified social links (GitHub, LinkedIn, X, email).
+  - `SkipLink` (`app/components/ui/SkipLink.tsx`): Accessible skip link for keyboard navigation.
+- **Styleguide Route:**
+  - Created `/styleguide` (`app/routes/styleguide.tsx`) showcasing all tokens, typography hierarchy, button states, and chips.
+- **Verification:**
+  - Pre-rendered static HTML at `build/client/styleguide/index.html`.
+  - `npm run lint`, `npm run typecheck`, and `npm run build` all pass cleanly.
+- **Phase 2 STOP Gate:** Proposing design system for owner review.
