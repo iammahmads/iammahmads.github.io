@@ -99,6 +99,25 @@
     - Direct email link and copy-to-clipboard button with visual feedback.
   - `SmoothScroll` (`app/components/ui/SmoothScroll.tsx`): Lenis smooth scrolling that respects `prefers-reduced-motion` and native anchor navigation.
 - **Verification:**
-  - 12 unit tests passing (`tests/contact-form.spec.ts`, `tests/contact.spec.ts`, `tests/github.spec.ts`, `tests/github-ranking.spec.ts`).
-  - Pre-rendered HTML builds cleanly in 334ms.
-- **Next Phase:** Phase 6 (Projects index with technology filtering & detail pages with markdown rendering).
+  - 12 unit tests passing.
+
+---
+
+## Phase 6: Projects Pages & Case Studies (Complete)
+
+- **Date:** 10 November 2026
+- **Implementation:**
+  - `/projects` index (`app/routes/projects.tsx`):
+    - Real-time technology filtering with chips (`techOptions`) synchronized to URL query parameters (`?tech=...`).
+    - Real-time client search filtering through title, name, summary, and repository topics.
+    - Desktop live hover preview plate following focused/hovered rows.
+    - Dense, scannable layout with stars, language badge, and pushed date.
+  - `/projects/[slug]` detail route (`app/routes/project.tsx`):
+    - Hero header with verified summary and stack tags.
+    - Media showcase with graceful fallbacks (custom screenshots -> brand technical plate).
+    - Previous and Next project links for scannable exploration.
+    - Markdown rendering with `react-markdown` and `rehype-sanitize` (`app/lib/markdown.ts`), rewriting relative image and file URLs to raw GitHub URLs.
+- **Verification:**
+  - 15 unit tests passing (`tests/markdown.spec.ts` added).
+  - All 23 static project detail pages pre-rendered cleanly.
+- **Next Phase:** Phase 7 (Education & Postgraduate Research Page).
