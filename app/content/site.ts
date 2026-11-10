@@ -28,7 +28,7 @@ export const site = {
   // Editing, deleting or recreating a question in the Google Form changes its entry ID.
   // Submissions will still look successful but fields will be lost. Re-test after any form change.
   contactForm: {
-    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdBoBjQQm-0GHZxKGxrs94P0ugnRJW_SEjbm6Bmd5KHGThAMg/formResponse",
+    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdFIKuxObwvZ8HRZEpZvHwHNlQKB5kjw9FCIBwFS8LWSRBK8A/formResponse",
     entries: {
       name: "entry.2005620554",
       email: "entry.1045781291",
