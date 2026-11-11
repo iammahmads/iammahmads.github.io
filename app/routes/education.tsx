@@ -378,7 +378,7 @@ export default function EducationRoute() {
                     className="inline-flex items-center gap-1.5 text-xs text-[#3DF2E0] hover:text-white font-semibold transition-colors"
                   >
                     <span>Verify Credential</span>
-                    <span className="text-sm leading-none">&nearr;</span>
+                    <span className="text-sm leading-none">&rarr;</span>
                   </a>
                 </div>
               )}
