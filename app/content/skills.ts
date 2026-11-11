@@ -41,11 +41,22 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: "DevOps & Engineering Practice",
-    description: "Tooling, testing, and modern version control workflows.",
+    name: "AI & Intelligent Systems",
+    description: "Building developer tooling, LLM integrations, and autonomous agents.",
     skills: [
-      { name: "Git & GitHub", level: "core", evidenceRepos: ["portfolio", "FypGuard"] },
-      { name: "Render Deployment", level: "core", evidenceRepos: ["portfolio"] },
+      { name: "AI Agents & LLMs", level: "core", evidenceRepos: ["FypGuard", "erc-8004-hackathon", "code-commenter"] },
+      { name: "Prompt Design (Vertex AI)", level: "proficient", evidenceRepos: [] },
+      { name: "RAG & Code Compliance", level: "core", evidenceRepos: ["FypGuard"] },
+      { name: "FastAPI & Python", level: "proficient", evidenceRepos: ["code-commenter"] },
+    ],
+  },
+  {
+    name: "DevOps & Engineering Practice",
+    description: "Tooling, testing, and modern automated deployment workflows.",
+    skills: [
+      { name: "Git & GitHub", level: "core", evidenceRepos: ["iammahmads.github.io", "FypGuard"] },
+      { name: "GitHub Actions & CI/CD", level: "core", evidenceRepos: ["iammahmads.github.io"] },
+      { name: "Google Cloud", level: "proficient", evidenceRepos: [] },
       { name: "Agile & Project Management", level: "proficient", evidenceRepos: [] },
       { name: "Linux / Bash", level: "proficient", evidenceRepos: [] },
     ],

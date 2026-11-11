@@ -184,6 +184,12 @@ export default function EducationRoute() {
                   <p className="text-sm text-[#B9A7FF] mt-1">
                     {deg.institution} {deg.location && `· ${deg.location}`}
                   </p>
+                  {deg.grade && (
+                    <p className="text-xs font-semibold text-[#3DF2E0] mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#170B2B] border border-[#3DF2E0]/30">
+                      <span>Graduated:</span>
+                      <span className="text-[#F3F1FA]">{deg.grade}</span>
+                    </p>
+                  )}
                 </div>
                 <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#170B2B] text-[#3DF2E0] border border-[#3DF2E0]/30 self-start sm:self-auto">
                   {deg.start} – {deg.end}
@@ -339,15 +345,43 @@ export default function EducationRoute() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {education.credentials.map((cred) => (
             <div
               key={cred.name}
-              className="p-6 rounded-2xl bg-[#241346]/40 border border-[#241346] space-y-2"
+              className="p-6 rounded-2xl bg-[#241346]/40 border border-[#241346] hover:border-[#3DF2E0]/40 transition-colors flex flex-col justify-between space-y-4"
             >
-              <span className="text-xs text-[#3DF2E0] font-semibold">{cred.issuer}</span>
-              <h3 className="text-base font-bold text-[#F3F1FA]">{cred.name}</h3>
-              {cred.date && <p className="text-xs text-[#8E82A9]">Issued {cred.date}</p>}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs text-[#3DF2E0] font-semibold">{cred.issuer}</span>
+                  {cred.date && <span className="text-xs text-[#8E82A9]">{cred.date}</span>}
+                </div>
+                <h3 className="text-base font-bold text-[#F3F1FA] leading-snug">{cred.name}</h3>
+                {cred.score && (
+                  <p className="text-xs text-[#FFB454] font-medium bg-[#FFB454]/10 border border-[#FFB454]/20 rounded-md px-2 py-0.5 inline-block">
+                    {cred.score}
+                  </p>
+                )}
+                {cred.credentialId && (
+                  <p className="text-[11px] text-[#8E82A9] font-mono truncate" title={cred.credentialId}>
+                    ID: {cred.credentialId}
+                  </p>
+                )}
+              </div>
+
+              {cred.url && (
+                <div className="pt-2 border-t border-[#241346]/60">
+                  <a
+                    href={cred.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#3DF2E0] hover:text-white font-semibold transition-colors"
+                  >
+                    <span>Verify Credential</span>
+                    <span className="text-sm leading-none">&nearr;</span>
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
