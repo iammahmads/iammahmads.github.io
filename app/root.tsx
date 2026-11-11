@@ -16,7 +16,7 @@ import { site } from "~/content/site";
 import "~/app.css";
 
 export const links: LinksFunction = () => [
-  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+  { rel: "icon", type: "image/jpeg", href: "/favicon.jpeg" },
   { rel: "manifest", href: "/site.webmanifest" },
 ];
 

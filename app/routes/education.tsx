@@ -69,7 +69,7 @@ export default function EducationRoute() {
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-[1.05]">
-          Education &amp; Postgraduate Intent
+          Education &amp; Future Plans
         </h1>
 
         <p className="text-xl sm:text-2xl text-[#B9A7FF] leading-relaxed font-['Instrument_Sans']">

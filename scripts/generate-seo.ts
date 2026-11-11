@@ -64,14 +64,14 @@ export function generateSeoFiles() {
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allUrls
-  .map(
-    (u) => `  <url>
+      .map(
+        (u) => `  <url>
     <loc>${u.loc}</loc>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`
-  )
-  .join("\n")}
+      )
+      .join("\n")}
 </urlset>
 `;
 
@@ -99,9 +99,9 @@ Sitemap: ${site.url}/sitemap.xml
     theme_color: "#170B2B",
     icons: [
       {
-        src: "/favicon.svg",
+        src: "/favicon.jpeg",
         sizes: "any",
-        type: "image/svg+xml",
+        type: "image/jpeg",
       },
     ],
   };
@@ -112,18 +112,6 @@ Sitemap: ${site.url}/sitemap.xml
     "utf-8"
   );
   console.log("[generate-seo] Generated site.webmanifest.");
-
-  // 4. Favicon SVG
-  const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#170B2B"/>
-  <polygon points="32,8 54,22 54,44 32,56 10,44 10,22" stroke="#3DF2E0" stroke-width="2.5" fill="#241346" fill-opacity="0.8"/>
-  <polygon points="32,8 32,56 54,44" fill="#B9A7FF" fill-opacity="0.2"/>
-  <polygon points="32,24 44,32 32,40 20,32" stroke="#FFB454" stroke-width="2" fill="#FFB454" fill-opacity="0.45"/>
-</svg>
-`;
-
-  fs.writeFileSync(path.join(publicDir, "favicon.svg"), faviconSvg, "utf-8");
-  console.log("[generate-seo] Generated favicon.svg.");
 }
 
 // Run directly if invoked from CLI

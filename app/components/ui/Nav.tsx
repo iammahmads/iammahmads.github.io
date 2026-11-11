@@ -3,16 +3,20 @@ import { site } from "~/content/site";
 
 export function Nav() {
   const location = useLocation();
+  const isEducationPage = location.pathname.startsWith("/education");
+  const cvUrl = isEducationPage ? site.links.educationalCv : site.links.cv;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-[#170B2B]/75 border-b border-[#241346]/80 transition-colors">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="group flex items-center gap-3 text-lg font-semibold tracking-tight text-[#F3F1FA] hover:text-[#3DF2E0] transition-colors"
+          className={`transition-colors py-1 hover:text-[#3DF2E0] ${location.pathname === "/"
+            ? "text-[#3DF2E0] font-semibold border-b-2 border-[#3DF2E0]"
+            : "text-[#B9A7FF]"
+            }`}
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-[#3DF2E0] shadow-[0_0_8px_#3DF2E0] group-hover:scale-125 transition-transform" />
-          <span className="font-['Bricolage_Grotesque']">{site.name}</span>
+          Home
         </Link>
 
         <nav aria-label="Main Navigation">
@@ -49,7 +53,7 @@ export function Nav() {
             </li>
             <li>
               <a
-                href={site.links.cv}
+                href={cvUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#B9A7FF] hover:text-[#3DF2E0] transition-colors py-1 inline-flex items-center gap-1"

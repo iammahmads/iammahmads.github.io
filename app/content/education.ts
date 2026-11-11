@@ -45,7 +45,7 @@ export type EducationData = {
 export const education: EducationData = {
   intent: {
     level: ["masters"],
-    headline: "Open to Master's study",
+    headline: "Past & Future",
     statement:
       "Seeking Master's programs focused on software engineering, intelligent systems, and scalable architectures. Eager to contribute to research in code verification, distributed systems, and modern web infrastructure. Prepared through rigorous undergraduate coursework, mentorship leadership, and production software development.",
     fields: ["Software Engineering", "Computer Science", "Intelligent Systems"],
@@ -102,10 +102,16 @@ export const education: EducationData = {
       kind: "work",
     },
     {
-      date: "2025 & 2026",
-      title: "Stanford Code in Place — Section Leader & Mentor",
+      date: "Oct 2022 – Jun 2026",
+      title: "BS Software Engineering at GCUF",
+      detail: "Undergraduate degree with capstone in code verification systems.",
+      kind: "education",
+    },
+    {
+      date: "2026",
+      title: "Stanford Code in Place — Mentor",
       detail:
-        "Led weekly interactive sections, code reviews, and programming workshops for global students learning Python fundamentals.",
+        "One on one interactive sections, code reviews, and programming workshops for global students learning Python fundamentals.",
       kind: "education",
     },
     {
@@ -115,9 +121,10 @@ export const education: EducationData = {
       kind: "project",
     },
     {
-      date: "Oct 2022 – Jun 2026",
-      title: "BS Software Engineering at GCUF",
-      detail: "Undergraduate degree with capstone in code verification systems.",
+      date: "2025",
+      title: "Stanford Code in Place — Section Leader",
+      detail:
+        "Led weekly interactive sections, code reviews, and programming workshops for global students learning Python fundamentals.",
       kind: "education",
     },
     {

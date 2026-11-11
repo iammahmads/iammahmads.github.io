@@ -8,9 +8,9 @@
   "theme_color": "#170B2B",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/favicon.jpeg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/jpeg"
     }
   ]
 }

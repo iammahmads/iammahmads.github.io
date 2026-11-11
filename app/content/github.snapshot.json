@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-10T12:52:33.392Z",
+  "fetchedAt": "2026-11-11T06:27:08.581Z",
   "user": {
     "login": "iammahmads",
     "name": "Muhammad Ahmad Shahid",
@@ -215,7 +215,7 @@
       "liveUrl": "https://iammahmads.github.io/",
       "stars": 1,
       "forks": 0,
-      "pushedAt": "2026-11-10T12:15:40Z",
+      "pushedAt": "2026-11-10T13:05:35Z",
       "language": {
         "name": "TypeScript"
       },
@@ -360,29 +360,6 @@
       "stars": 0,
       "forks": 0,
       "pushedAt": "2026-02-07T10:43:23Z",
-      "language": {
-        "name": "Python"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "share": 100
-        }
-      ],
-      "topics": [],
-      "featured": false,
-      "order": 50,
-      "source": "fallback"
-    },
-    {
-      "slug": "leetcode-solutions",
-      "name": "leetcode-solutions",
-      "title": "leetcode solutions",
-      "summary": "This repo contains the code of leetcode problems that I have solved till now.",
-      "repoUrl": "https://github.com/iammahmads/leetcode-solutions",
-      "stars": 0,
-      "forks": 0,
-      "pushedAt": "2025-06-23T11:40:03Z",
       "language": {
         "name": "Python"
       },

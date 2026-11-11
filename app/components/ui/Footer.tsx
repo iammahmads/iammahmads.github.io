@@ -1,14 +1,15 @@
+import { useLocation } from "react-router";
 import { site } from "~/content/site";
 
 export function Footer() {
+  const location = useLocation();
+  const isEducationPage = location.pathname.startsWith("/education");
+  const cvUrl = isEducationPage ? site.links.educationalCv : site.links.cv;
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-[#241346] bg-[#170B2B] text-[#8E82A9] py-12 relative z-20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <p className="text-sm text-[#F3F1FA] font-medium">{site.name}</p>
-        </div>
 
         <ul className="flex items-center gap-6 text-sm">
           <li>
@@ -51,7 +52,7 @@ export function Footer() {
           </li>
           <li>
             <a
-              href={site.links.cv}
+              href={cvUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#3DF2E0] transition-colors"

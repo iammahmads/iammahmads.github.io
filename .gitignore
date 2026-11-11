@@ -28,3 +28,7 @@ dist-ssr
 # React Router & Build output
 build
 .react-router
+
+# Personal data exports
+LinkedinData
+

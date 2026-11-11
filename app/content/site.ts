@@ -19,6 +19,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/iammahmads",
     x: "https://x.com/iammahmads",
     cv: "https://drive.google.com/file/d/1vJbqj5VW36_1Ipcbq5c3KOtxIdr5Z0lf/view?usp=sharing",
+    educationalCv: "https://drive.google.com/file/d/1tK1ghdlTtlsmHn5A8Lvr4gahVW34P2e_/view?usp=drive_link",
   },
   photo: {
     src: "/muhammad-ahmad-shahid.jpeg",
