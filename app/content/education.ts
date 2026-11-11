@@ -48,7 +48,7 @@ export const education: EducationData = {
     level: ["masters"],
     headline: "Past & Future",
     statement:
-      "Seeking Master's programs focused on software engineering, intelligent systems, and scalable architectures. Eager to contribute to research in code verification, distributed systems, and modern web infrastructure. Prepared through rigorous undergraduate coursework, mentorship leadership, and production software development.",
+      "Seeking Graduate programs focused on software engineering, intelligent systems, and scalable architectures. Eager to contribute to research in code verification, distributed systems, and modern web infrastructure. Prepared through rigorous undergraduate coursework, mentorship leadership, and production software development.",
     fields: ["Software Engineering", "Computer Science", "Intelligent Systems"],
     researchInterests: [
       {

@@ -438,10 +438,10 @@ export default function EducationRoute() {
             Inquiries
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
-            Contact for Admissions &amp; Advisors
+            Contact for Educational Purposes
           </h2>
           <p className="text-base text-[#B9A7FF] max-w-2xl leading-relaxed">
-            Prospective supervisors and graduate program committees are welcome to connect. Submissions through this form are tagged with <code className="text-[#3DF2E0] font-mono">[Education]</code> for prioritized notification.
+            Submissions through this form are tagged with <code className="text-[#3DF2E0] font-mono">[Education]</code> for prioritized notification.
           </p>
         </div>
 
