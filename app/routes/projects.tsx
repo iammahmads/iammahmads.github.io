@@ -70,16 +70,16 @@ export default function ProjectsRoute() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 space-y-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
       {/* Header */}
-      <header className="space-y-4 max-w-3xl">
+      <header className="space-y-3 sm:space-y-4 max-w-3xl">
         <span className="text-xs font-semibold text-[#3DF2E0]">
           Software &amp; systems
         </span>
-        <h1 className="text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+        <h1 className="text-3xl xs:text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
           All Projects
         </h1>
-        <p className="text-[#B9A7FF] text-lg leading-relaxed">
+        <p className="text-[#B9A7FF] text-base sm:text-lg leading-relaxed">
           Full-stack web applications, decentralized platforms, and developer tooling automatically synchronized from GitHub.
         </p>
         <p className="text-xs text-[#8E82A9]">
@@ -88,7 +88,7 @@ export default function ProjectsRoute() {
       </header>
 
       {/* Filter and Search Bar */}
-      <div className="space-y-6 p-6 rounded-2xl bg-[#241346]/40 border border-[#241346]">
+      <div className="space-y-4 sm:space-y-6 p-4 sm:p-6 rounded-2xl bg-[#241346]/40 border border-[#241346]">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-2">
             {techOptions.map(({ name, count }) => (
@@ -109,7 +109,7 @@ export default function ProjectsRoute() {
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search projects..."
               aria-label="Search projects by keyword"
-              className="w-full px-3.5 py-1.5 text-xs rounded-xl bg-[#170B2B] border border-[#241346] text-[#F3F1FA] placeholder-[#8E82A9] focus:border-[#3DF2E0] focus:outline-none"
+              className="w-full px-3.5 py-2 text-sm rounded-xl bg-[#170B2B] border border-[#241346] text-[#F3F1FA] placeholder-[#8E82A9] focus:border-[#3DF2E0] focus:outline-none"
             />
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function ProjectsRoute() {
         {/* Project Rows */}
         <div className="lg:col-span-8 space-y-3">
           {filteredProjects.length === 0 ? (
-            <div className="p-12 text-center rounded-2xl bg-[#241346]/20 border border-[#241346] space-y-2">
+            <div className="p-8 sm:p-12 text-center rounded-2xl bg-[#241346]/20 border border-[#241346] space-y-2">
               <p className="text-base text-[#F3F1FA] font-medium">No matching projects found</p>
               <p className="text-xs text-[#8E82A9]">
                 Try clearing your search query or selecting a different technology filter.
@@ -133,7 +133,7 @@ export default function ProjectsRoute() {
                 to={`/projects/${project.slug}`}
                 onMouseEnter={() => setHoveredProject(project)}
                 onFocus={() => setHoveredProject(project)}
-                className="block p-5 sm:p-6 rounded-2xl bg-[#241346]/30 border border-[#241346] hover:bg-[#241346]/70 hover:border-[#3DF2E0]/50 transition-all duration-200 group"
+                className="block p-4 sm:p-6 rounded-2xl bg-[#241346]/30 border border-[#241346] hover:bg-[#241346]/70 hover:border-[#3DF2E0]/50 transition-all duration-200 group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="space-y-1.5">

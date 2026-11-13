@@ -5,24 +5,24 @@ export function Capabilities() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
-    <section className="px-6 max-w-6xl mx-auto py-16 space-y-12">
+    <section className="px-4 sm:px-6 max-w-6xl mx-auto py-12 sm:py-16 space-y-8 sm:space-y-12">
       <div className="space-y-3 border-b border-[#241346] pb-6">
         <span className="text-xs font-semibold text-[#3DF2E0]">
           Technical stack
         </span>
-        <h2 className="text-3xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+        <h2 className="text-2xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
           Engineering Capabilities
         </h2>
-        <p className="text-[#B9A7FF] max-w-xl text-base">
+        <p className="text-[#B9A7FF] max-w-xl text-sm sm:text-base">
           Grouped by engineering domain with direct evidence from public production code and open-source repositories.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {skillCategories.map((category) => (
           <div
             key={category.name}
-            className="p-8 rounded-3xl bg-[#241346]/40 border border-[#241346] space-y-6"
+            className="p-6 sm:p-8 rounded-3xl bg-[#241346]/40 border border-[#241346] space-y-5 sm:space-y-6"
           >
             <div className="space-y-1">
               <h3 className="text-xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">

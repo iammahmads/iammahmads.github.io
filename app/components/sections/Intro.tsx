@@ -2,14 +2,14 @@ import { site } from "~/content/site";
 
 export function Intro() {
   return (
-    <section className="px-6 max-w-6xl mx-auto py-12">
-      <div className="p-8 sm:p-14 rounded-3xl bg-[#241346]/40 border border-[#241346] backdrop-blur-md grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
-        <div className="lg:col-span-2 space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-tight">
+    <section className="px-4 sm:px-6 max-w-6xl mx-auto py-8 sm:py-12">
+      <div className="p-6 sm:p-14 rounded-3xl bg-[#241346]/40 border border-[#241346] backdrop-blur-md grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 items-center">
+        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-tight">
             Engineering with Discipline &amp; Clear Purpose
           </h2>
 
-          <div className="space-y-4 text-base sm:text-lg text-[#F3F1FA]/85 leading-relaxed">
+          <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-[#F3F1FA]/85 leading-relaxed">
             <p>
               I am a software engineering graduate from GCUF. My focus is building robust, high-performance web systems and developer utilities that solve concrete problems.
             </p>

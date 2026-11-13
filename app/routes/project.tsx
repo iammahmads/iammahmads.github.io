@@ -79,7 +79,7 @@ export default function ProjectDetailRoute() {
   };
 
   return (
-    <article className="max-w-4xl mx-auto px-6 py-12 space-y-12">
+    <article className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -96,8 +96,8 @@ export default function ProjectDetailRoute() {
       </nav>
 
       {/* Header */}
-      <header className="space-y-6">
-        <div className="flex flex-wrap items-center gap-3">
+      <header className="space-y-4 sm:space-y-6">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <span className="text-xs px-3 py-1 rounded-full bg-[#241346] text-[#3DF2E0] border border-[#3DF2E0]/30 font-semibold">
             {project.language?.name || "Code"}
           </span>
@@ -111,31 +111,31 @@ export default function ProjectDetailRoute() {
           </span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-[1.05]">
+        <h1 className="text-3xl xs:text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-[1.05] break-words">
           {project.title}
         </h1>
 
-        <p className="text-xl sm:text-2xl text-[#B9A7FF] leading-relaxed font-['Instrument_Sans']">
+        <p className="text-lg sm:text-2xl text-[#B9A7FF] leading-relaxed font-['Instrument_Sans']">
           {project.summary}
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-4 pt-2">
-          <Button href={project.repoUrl} external variant="primary" size="md">
+        <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
+          <Button href={project.repoUrl} external variant="primary" size="md" className="w-full sm:w-auto">
             View on GitHub &rarr;
           </Button>
           {project.liveUrl && (
-            <Button href={project.liveUrl} external variant="secondary" size="md">
+            <Button href={project.liveUrl} external variant="secondary" size="md" className="w-full sm:w-auto">
               Open Live Demo
             </Button>
           )}
         </div>
       </header>
 
-      {/* Media Plate */}
+        {/* Media Plate */}
       <section className="space-y-4">
         {project.media ? (
-          <div className="rounded-3xl overflow-hidden border border-[#241346] shadow-2xl bg-[#170B2B]">
+          <div className="rounded-2xl sm:rounded-3xl overflow-hidden border border-[#241346] shadow-2xl bg-[#170B2B]">
             <img
               src={project.media.src}
               alt={project.media.alt}
@@ -143,11 +143,11 @@ export default function ProjectDetailRoute() {
             />
           </div>
         ) : (
-          <div className="p-12 rounded-3xl bg-gradient-to-br from-[#241346]/80 to-[#170B2B] border border-[#241346] space-y-4">
+          <div className="p-6 sm:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#241346]/80 to-[#170B2B] border border-[#241346] space-y-3 sm:space-y-4">
             <span className="text-xs text-[#3DF2E0] font-medium">
               Technical profile
             </span>
-            <p className="text-2xl font-bold text-[#F3F1FA] font-['Bricolage_Grotesque']">
+            <p className="text-xl sm:text-2xl font-bold text-[#F3F1FA] font-['Bricolage_Grotesque']">
               {project.name}
             </p>
             <p className="text-sm text-[#F3F1FA]/70 leading-relaxed max-w-xl">
@@ -158,8 +158,8 @@ export default function ProjectDetailRoute() {
       </section>
 
       {/* Project Topics & Stack Details */}
-      <section className="p-8 rounded-3xl bg-[#241346]/30 border border-[#241346] space-y-6">
-        <h2 className="text-xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+      <section className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#241346]/30 border border-[#241346] space-y-4 sm:space-y-6">
+        <h2 className="text-lg sm:text-xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
           Stack &amp; Technologies
         </h2>
         <div className="flex flex-wrap gap-2">
@@ -182,11 +182,11 @@ export default function ProjectDetailRoute() {
 
       {/* README Case Study */}
       {processedReadme && (
-        <section className="p-8 sm:p-12 rounded-3xl bg-[#241346]/30 border border-[#241346] space-y-6">
-          <h2 className="text-2xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] border-b border-[#241346] pb-4">
+        <section className="p-5 sm:p-12 rounded-2xl sm:rounded-3xl bg-[#241346]/30 border border-[#241346] space-y-6 overflow-x-hidden">
+          <h2 className="text-xl sm:text-2xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] border-b border-[#241346] pb-4">
             Repository Documentation
           </h2>
-          <div className="prose prose-invert max-w-none prose-headings:font-['Bricolage_Grotesque'] prose-headings:text-[#F3F1FA] prose-p:text-[#F3F1FA]/80 prose-a:text-[#3DF2E0] prose-code:text-[#3DF2E0] prose-code:bg-[#170B2B] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-[#170B2B] prose-pre:border prose-pre:border-[#241346]">
+          <div className="prose prose-invert max-w-none break-words prose-headings:font-['Bricolage_Grotesque'] prose-headings:text-[#F3F1FA] prose-p:text-[#F3F1FA]/80 prose-a:text-[#3DF2E0] prose-code:text-[#3DF2E0] prose-code:bg-[#170B2B] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-[#170B2B] prose-pre:border prose-pre:border-[#241346] prose-pre:overflow-x-auto">
             <ReactMarkdown rehypePlugins={[[rehypeSanitize, sanitizeSchema]]}>
               {processedReadme}
             </ReactMarkdown>

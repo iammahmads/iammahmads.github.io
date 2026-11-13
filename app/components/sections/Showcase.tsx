@@ -9,13 +9,13 @@ export function Showcase() {
     .slice(0, 5);
 
   return (
-    <section className="px-6 max-w-6xl mx-auto py-16 space-y-12">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#241346] pb-6">
+    <section className="px-4 sm:px-6 max-w-6xl mx-auto py-12 sm:py-16 space-y-8 sm:space-y-12">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 border-b border-[#241346] pb-6">
         <div className="space-y-2">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Curated work
           </span>
-          <h2 className="text-3xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-5xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Featured Projects
           </h2>
         </div>
@@ -27,11 +27,11 @@ export function Showcase() {
         </Link>
       </div>
 
-      <div className="space-y-12">
+      <div className="space-y-8 sm:space-y-12">
         {featured.map((project, index) => (
           <article
             key={project.slug}
-            className="p-8 sm:p-12 rounded-3xl bg-[#241346]/40 border border-[#241346] hover:border-[#3DF2E0]/40 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group"
+            className="p-6 sm:p-12 rounded-3xl bg-[#241346]/40 border border-[#241346] hover:border-[#3DF2E0]/40 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center group"
           >
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center gap-3">

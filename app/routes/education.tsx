@@ -55,7 +55,7 @@ export default function EducationRoute() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 space-y-20">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-20">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -63,16 +63,16 @@ export default function EducationRoute() {
       />
 
       {/* 1. Intent Section */}
-      <section className="space-y-6">
+      <section className="space-y-4 sm:space-y-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#241346] border border-[#3DF2E0]/40 text-xs text-[#3DF2E0] font-semibold">
           <span>{education.intent.headline}</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-[1.05]">
+        <h1 className="text-3xl xs:text-4xl sm:text-6xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA] leading-[1.05]">
           Education &amp; Future Plans
         </h1>
 
-        <p className="text-xl sm:text-2xl text-[#B9A7FF] leading-relaxed font-['Instrument_Sans']">
+        <p className="text-lg sm:text-2xl text-[#B9A7FF] leading-relaxed font-['Instrument_Sans']">
           {education.intent.statement}
         </p>
 
@@ -85,7 +85,7 @@ export default function EducationRoute() {
               {education.intent.fields.map((field) => (
                 <span
                   key={field}
-                  className="px-3.5 py-1.5 rounded-xl bg-[#241346] text-[#F3F1FA] text-sm font-medium border border-[#241346]"
+                  className="px-3.5 py-1.5 rounded-xl bg-[#241346] text-[#F3F1FA] text-xs sm:text-sm font-medium border border-[#241346]"
                 >
                   {field}
                 </span>
@@ -98,7 +98,7 @@ export default function EducationRoute() {
               href={education.documents[0].href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-sm font-semibold text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors w-full sm:w-auto shrink-0 self-start sm:self-end"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-sm font-semibold text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors w-full sm:w-auto shrink-0 self-start sm:self-end"
             >
               <span>View Curriculum Vitae</span>
               <span className="text-base leading-none">&rarr;</span>
@@ -108,12 +108,12 @@ export default function EducationRoute() {
       </section>
 
       {/* 2. Focus and Evidence */}
-      <section className="space-y-8 border-t border-[#241346] pt-12">
+      <section className="space-y-6 sm:space-y-8 border-t border-[#241346] pt-8 sm:pt-12">
         <div className="space-y-2">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Academic focus
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Research Interests &amp; Concrete Evidence
           </h2>
           <p className="text-[#8E82A9] text-sm">
@@ -121,13 +121,13 @@ export default function EducationRoute() {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {education.intent.researchInterests.map((interest) => {
             const evidence = findEvidenceProjects(interest.evidenceTags);
             return (
               <div
                 key={interest.title}
-                className="p-8 rounded-3xl bg-[#241346]/40 border border-[#241346] space-y-4"
+                className="p-5 sm:p-8 rounded-3xl bg-[#241346]/40 border border-[#241346] space-y-4"
               >
                 <h3 className="text-2xl font-bold text-[#F3F1FA] font-['Bricolage_Grotesque']">
                   {interest.title}
@@ -160,21 +160,21 @@ export default function EducationRoute() {
       </section>
 
       {/* 3. Academic Record */}
-      <section className="space-y-8 border-t border-[#241346] pt-12">
+      <section className="space-y-6 sm:space-y-8 border-t border-[#241346] pt-8 sm:pt-12">
         <div className="space-y-2">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Degrees
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Academic Record
           </h2>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {education.degrees.map((deg) => (
             <div
               key={deg.degree}
-              className="p-8 rounded-3xl bg-[#241346]/40 border border-[#241346] space-y-6"
+              className="p-5 sm:p-8 rounded-3xl bg-[#241346]/40 border border-[#241346] space-y-5 sm:space-y-6"
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-[#241346] pb-4">
                 <div>
@@ -258,21 +258,21 @@ export default function EducationRoute() {
       </section>
 
       {/* 4. Journey Timeline */}
-      <section className="space-y-8 border-t border-[#241346] pt-12">
+      <section className="space-y-6 sm:space-y-8 border-t border-[#241346] pt-8 sm:pt-12">
         <div className="space-y-2">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Chronology
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Journey Timeline
           </h2>
         </div>
 
-        <div className="relative border-l-2 border-[#241346] pl-6 sm:pl-8 ml-3 space-y-8">
+        <div className="relative border-l-2 border-[#241346] pl-5 sm:pl-8 ml-2 sm:ml-3 space-y-6 sm:space-y-8">
           {education.timeline.map((item, idx) => (
             <div key={idx} className="relative space-y-1.5">
-              <span className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#3DF2E0] border-2 border-[#170B2B]" />
-              <div className="flex items-center gap-3">
+              <span className="absolute -left-[27px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#3DF2E0] border-2 border-[#170B2B]" />
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <span className="text-xs font-semibold text-[#3DF2E0] font-mono">
                   {item.date}
                 </span>
@@ -280,7 +280,7 @@ export default function EducationRoute() {
                   {item.kind}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-[#F3F1FA] font-['Bricolage_Grotesque']">
+              <h3 className="text-base sm:text-lg font-bold text-[#F3F1FA] font-['Bricolage_Grotesque']">
                 {item.title}
               </h3>
               {item.detail && (
@@ -335,12 +335,12 @@ export default function EducationRoute() {
       )}
 
       {/* 5. Credentials */}
-      <section className="space-y-8 border-t border-[#241346] pt-12">
+      <section className="space-y-6 sm:space-y-8 border-t border-[#241346] pt-8 sm:pt-12">
         <div className="space-y-2">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Certifications
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Verified Credentials
           </h2>
         </div>
@@ -349,7 +349,7 @@ export default function EducationRoute() {
           {education.credentials.map((cred) => (
             <div
               key={cred.name}
-              className="p-6 rounded-2xl bg-[#241346]/40 border border-[#241346] hover:border-[#3DF2E0]/40 transition-colors flex flex-col justify-between space-y-4"
+              className="p-5 sm:p-6 rounded-2xl bg-[#241346]/40 border border-[#241346] hover:border-[#3DF2E0]/40 transition-colors flex flex-col justify-between space-y-4"
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between gap-2">
@@ -388,17 +388,17 @@ export default function EducationRoute() {
       </section>
 
       {/* 6. Documents */}
-      <section className="space-y-6 border-t border-[#241346] pt-12">
+      <section className="space-y-6 border-t border-[#241346] pt-8 sm:pt-12">
         <div className="space-y-2">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Academic materials
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Official Documents &amp; References
           </h2>
         </div>
 
-        <div className="p-8 rounded-3xl bg-[#241346]/30 border border-[#241346] space-y-4">
+        <div className="p-4 sm:p-8 rounded-3xl bg-[#241346]/30 border border-[#241346] space-y-4">
           {education.documents.map((doc, idx) => (
             <div
               key={idx}
@@ -413,7 +413,7 @@ export default function EducationRoute() {
                   href={doc.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-xs text-[#3DF2E0] font-semibold hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors shrink-0"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-xs text-[#3DF2E0] font-semibold hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors w-full sm:w-auto shrink-0"
                 >
                   <span>View PDF</span>
                   <span className="text-sm leading-none">&uarr;</span>
@@ -432,12 +432,12 @@ export default function EducationRoute() {
       </section>
 
       {/* 7. Contact for Admissions and Supervisors */}
-      <section id="education-contact" className="space-y-8 border-t border-[#241346] pt-12 scroll-mt-24">
+      <section id="education-contact" className="space-y-6 sm:space-y-8 border-t border-[#241346] pt-8 sm:pt-12 scroll-mt-24">
         <div className="space-y-3">
           <span className="text-xs font-semibold text-[#3DF2E0]">
             Inquiries
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
+          <h2 className="text-2xl sm:text-4xl font-bold font-['Bricolage_Grotesque'] text-[#F3F1FA]">
             Contact for Educational Purposes
           </h2>
           <p className="text-base text-[#B9A7FF] max-w-2xl leading-relaxed">
@@ -445,7 +445,7 @@ export default function EducationRoute() {
           </p>
         </div>
 
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#241346]/50 border border-[#241346]">
+        <div className="p-5 sm:p-12 rounded-3xl bg-[#241346]/50 border border-[#241346]">
           <ContactForm sourceTag="Education" />
         </div>
       </section>
