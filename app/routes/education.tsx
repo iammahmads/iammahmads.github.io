@@ -98,7 +98,7 @@ export default function EducationRoute() {
               href={education.documents[0].href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-sm font-semibold text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors shrink-0 self-start sm:self-end"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#241346] border border-[#3DF2E0]/40 text-sm font-semibold text-[#3DF2E0] hover:bg-[#3DF2E0] hover:text-[#170B2B] transition-colors w-full sm:w-auto shrink-0 self-start sm:self-end"
             >
               <span>View Curriculum Vitae</span>
               <span className="text-base leading-none">&rarr;</span>

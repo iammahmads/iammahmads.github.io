@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="border-t border-[#241346] bg-[#170B2B] text-[#8E82A9] py-12 relative z-20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
 
-        <ul className="flex items-center gap-6 text-sm">
+        <ul className="flex flex-col sm:flex-row items-center gap-6 text-sm">
           <li>
             <a
               href={site.links.github}
